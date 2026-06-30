@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="adjuntoAnexoXI" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="5e814351-a48a-47d4-b6b4-7584529efd87">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="centro" class="java.lang.String"/>
+	<parameter name="provincia" class="java.lang.String"/>
+	<parameter name="nombreAutorizacion" class="java.lang.String"/>
+	<parameter name="nombreCurso" class="java.lang.String"/>
+	<parameter name="estadoSolicitud" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="listadoAlumnos" class="java.lang.String"/>
+	<parameter name="nombreDelProv" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="65" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="50" height="50" uuid="4148e8cd-e015-477e-b727-e8618da0819c"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="60" y="0" width="260" height="51" uuid="c109e0e1-aa9d-466e-9695-825e51d40c5c"/>
+				<textElement textAlignment="Left" markup="styled">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Delegación Provincial de " +"<b>" + $P{provincia}+"</b>"+" Consejería de Educación, Cultura y Deporte"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="110" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="52" width="158" height="20" uuid="a42c39ac-2a46-4c89-b950-8e3743699d98"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Autorización solicitada "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="550" height="52" uuid="70d6a9e4-7b89-4db8-8f7e-75c59b1a2ad7">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+					<font size="12" isBold="true"/>
+					<paragraph firstLineIndent="110"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{centro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="52" width="550" height="58" uuid="95b02a41-a4c4-42fd-a0e5-a35f6fab997e">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" markup="styled">
+					<font size="12" isBold="true"/>
+					<paragraph firstLineIndent="135"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Anexo XI EN PERIODO EXTRAORDINARIO O FUERA DEL ENTORNO SOCIOECONÓMICO"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="110" height="20" uuid="c2734cd2-18ca-4b4d-92c1-38f06545fe25"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El centro educativo"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="22">
+			<textField textAdjust="StretchHeight">
+				<reportElement x="1" y="0" width="549" height="20" uuid="9e580c35-d672-4275-9a99-414692dc21e5">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="12" isBold="true"/>
+					<paragraph firstLineIndent="70"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{listadoAlumnos} !=null?$P{listadoAlumnos}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="1" width="91" height="19" uuid="9e5515ac-24cf-4e10-99dd-05ed3890813c"/>
+				<textElement verticalAlignment="Top">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Alumnos/as"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="311">
+			<image>
+				<reportElement x="320" y="191" width="100" height="101" uuid="4922e7e3-44f2-4173-b15b-edc5fb28725b"/>
+				<imageExpression><![CDATA["assets/imagesPDF/vistoBuenoCLM.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="0" y="11" width="551" height="50" uuid="ea0c6000-b46a-4b55-89fc-fe6a40356ae2">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+					<font size="12" isBold="true"/>
+					<paragraph firstLineIndent="100"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombreCurso}!=null?$P{nombreCurso}:""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="62" width="551" height="58" uuid="b6e7bd94-e02a-484b-a9b8-6ac780cf1c73"/>
+				<textElement textAlignment="Left" markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estadoSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="120" width="281" height="38" uuid="5d2dbfc4-28a0-45af-a53f-e07e3dedb7ea"/>
+				<textElement markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{provincia} +", "+ $P{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="12" width="120" height="20" uuid="225d6f13-186b-41de-984e-f49aeb92f56a"/>
+				<textElement>
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Matriculados/as en"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="191" width="290" height="29" uuid="882957c9-5fcb-4a01-972b-8db39b2df1f8"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EL DELEGADO PROVINCIAL"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="260" width="290" height="29" uuid="5bfd7262-2f11-469c-b6fd-fbc318f6c7fa"/>
+				<textElement textAlignment="Left" markup="styled">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Fdo: " + $P{nombreDelProv}!= null? $P{nombreDelProv}:""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="31" splitType="Stretch">
+			<textField>
+				<reportElement x="420" y="10" width="104" height="20" uuid="2b545a04-0cb0-417c-a931-d54bd535b3e8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página  " + $V{PAGE_NUMBER}  + "  de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="524" y="10" width="26" height="20" uuid="d690a083-58ba-4d09-a808-63ad3bdef6b4">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

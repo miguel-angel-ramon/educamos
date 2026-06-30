@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Jun 16 17:03:07 CEST 2025
+spring-cloud-starter-gateway-4.0.9-javadoc.jar>central=
+spring-cloud-starter-gateway-4.0.9.jar>central=
+spring-cloud-starter-gateway-4.0.9.pom>central=

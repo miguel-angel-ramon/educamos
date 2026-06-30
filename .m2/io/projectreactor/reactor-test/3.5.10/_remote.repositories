@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 12:13:27 CEST 2025
+reactor-test-3.5.10-sources.jar>central=
+reactor-test-3.5.10.jar>central=
+reactor-test-3.5.10.pom>central=

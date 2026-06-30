@@ -1,0 +1,165 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>es.jccm.cstic.marte.util</groupId>
+	<artifactId>ldapwsclient</artifactId>
+	<version>0.0.4</version>
+
+	<properties>
+		<buildDate>${maven.build.timestamp}</buildDate>
+
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<slf4j.version>1.7.25</slf4j.version>
+		<wsimport.wsdlDirectory>src/main/resources/es/jccm/cstic/marte/util/ldapwsclient/wsdls</wsimport.wsdlDirectory>
+
+		<spring.version>3.1.4.RELEASE</spring.version>
+
+	</properties>
+
+	<dependencies>
+
+
+		<!-- librerías para logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
+
+
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>es.jccm.cstic.marte.util</groupId>
+			<artifactId>ldapConnector</artifactId>
+			<version>1.1.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring Framework -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<type>jar</type>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.jvnet.jax-ws-commons</groupId>
+				<artifactId>jaxws-maven-plugin</artifactId>
+				<version>2.3</version>
+				<configuration>
+					<target>2.0</target>
+				</configuration>
+
+				<executions>
+
+					<execution>
+						<id>ldapws</id>
+						<goals>
+							<goal>wsimport</goal>
+						</goals>
+						<configuration>
+							<verbose>true</verbose>
+
+							<wsdlDirectory>${wsimport.wsdlDirectory}</wsdlDirectory>
+							<wsdlFiles>
+								<wsdlFile>ldaputils.wsdl</wsdlFile>
+							</wsdlFiles>
+							<!-- Without this, multiple WSDLs won't be processed :( -->
+							<staleFile>${project.build.directory}/jaxws/stale/wsdl.ldapws.done</staleFile>
+							<packageName>es.jccm.cstic.marte.util.ldapwsclient.jaxws</packageName>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- añade automáticamente los fuentes generados al build path cuando 
+				se usa eclipse -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${project.build.directory}/generated-sources/wsimport/</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Artifactory-PRO-releases</name>
+			<url>http://artifactory.jccm.es/artifactory/areaComunCSTIC-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>central</id>
+			<name>Artifactory-PRO-snapshots</name>
+			<url>http://artifactory.jccm.es/artifactory/areaComunCSTIC-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>

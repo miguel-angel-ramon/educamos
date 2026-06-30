@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Anexo0B" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9795108-9ec1-44c1-a641-736b482a068b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="municipioP" class="java.lang.String"/>
+	<parameter name="codigoCentroP" class="java.lang.Long"/>
+	<parameter name="provinciaP" class="java.lang.String"/>
+	<parameter name="calleP" class="java.lang.String"/>
+	<parameter name="codigoPostalP" class="java.lang.String"/>
+	<parameter name="cifCentroP" class="java.lang.String"/>
+	<parameter name="telefonoP" class="java.lang.String"/>
+	<parameter name="correoP" class="java.lang.String"/>
+	<parameter name="nombreCentroCompleto" class="java.lang.String"/>
+	<parameter name="yearVigencia" class="java.lang.String"/>
+	<parameter name="familia" class="java.lang.String"/>
+	<parameter name="isCicloSuperior" class="java.lang.String"/>
+	<parameter name="descripcionFirma" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numeroConvenio" class="java.lang.String"/>
+	<field name="empleado.nombre" class="java.lang.String"/>
+	<field name="empleado.apellido1" class="java.lang.String"/>
+	<field name="empleado.apellido2" class="java.lang.String"/>
+	<field name="empleado.dniEmpleado" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.nombre" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido1" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido2" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.numeroDocumento" class="java.lang.String"/>
+	<field name="empresa.nombreEmpresa" class="java.lang.String"/>
+	<field name="id_sede.domicilio" class="java.lang.String"/>
+	<field name="id_sede.codigoPostal" class="java.lang.String"/>
+	<field name="empresa.numIde" class="java.lang.String"/>
+	<field name="id_sede.telefono" class="java.lang.Long"/>
+	<field name="id_sede.correo" class="java.lang.String"/>
+	<field name="id_sede.localidad.descripcionLarga" class="java.lang.String"/>
+	<field name="id_sede.municipio.provincia.descripcionLarga" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="792" width="98" height="1" uuid="03f07cf5-3fea-4486-809e-9ca24de9dc80"/>
+			</break>
+			<staticText>
+				<reportElement x="81" y="218" width="400" height="14" uuid="3f96520c-f565-4f2b-92f7-6bf637368aea">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom" rotation="None">
+					<font fontName="SansSerif" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[REUNIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="394" width="400" height="40" uuid="14a3b672-23d7-4917-aac7-bd94d47baf6b"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Las partes se reconocen recíprocamente la capacidad legal suficiente y necesaria para el otorgamiento del presente convenio, así como la representación que tienen acreditada, y a tal efecto;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="442" width="400" height="14" uuid="807577a0-cad8-4006-bca5-d1547922cef3">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[MANIFIESTAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="540" width="400" height="51" uuid="d8e921db-18ee-44fc-9fa7-76ab13e8ae80">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SEGUNDO.- Que el SESCAM tiene entre sus fines la prestación de atención clínica multidisciplinar a todos los pacientes de su ámbito, el desarrollo de la investigación sanitaria, formación continuada y docencia, y la mejora continua de la calidad de su sistema de atención sanitaria.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="594" width="400" height="104" uuid="61146d9c-a770-4bf2-a8d6-2aba2ddfbf8d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TERCERO.- Que con el fin promover la cooperación y colaboración en el desarrollo y realización de estancias formativas y de prácticas para estudiantes de Formación Profesional, y al amparo del Real Decreto 1147/2011, de 29 de julio, por el que se establece la ordenación general de la Formación Profesional del sistema educativo, y demás normativa vigente, y para el mejor cumplimiento de los objetivos de formación planteados en el marco de la Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional, ambas partes acuerdan suscribir este Convenio de Cooperación Educativa, de conformidad con las siguientes,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="0" width="394" height="30" uuid="76868555-9c4d-4d41-903a-e0e631d2bdfb"/>
+				<textElement textAlignment="Center" rotation="None">
+					<font size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[MODELO DE CONVENIO CENTRO EDUCATIVO/GERENCIA DE ATENCIÓN INTEGRAL (GAI), SESCAM]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="9b8454d1-f90c-4248-bee7-9619c1165869"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="485" y="0" width="50" height="50" uuid="d51e5670-1c9b-49c0-9643-d93ffd56f597">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="81" y="325" width="400" height="64" uuid="b80e284a-ad2c-4ba4-bec9-9bcff79c6a26">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["De otra parte, D./Dña."+$F{empleado.nombre}.concat( " " ).concat($F{empleado.apellido1}).concat(" ").concat($F{empleado.apellido2})+" , en nombre y representación del "+$P{nombreCentroCompleto}+", con domicilio en "+$P{municipioP}+", en su calidad de _________, cargo para el que fue nombrado por el titular de la Delegación Provincial de Educación, Cultura y Deportes de "+$P{municipioP}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="235" width="400" height="89" uuid="ed8c9abb-0fc1-42c2-baf1-201fcf48da69">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["De una parte, D./Dña. "+$F{trabajador.datosEmpresaTrabajador.nombre}.concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido1}).concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido2})+", Director/a Gerente, nombrado/a por                        …………………………., en ejercicio de las funciones establecidas por el Decreto 82/2019, de 16 de julio, de estructura orgánica y funciones del Servicio de Salud de Castilla-La Mancha (SESCAM) y la Resolución de 21/10/2019, de la Dirección-Gerencia, sobre delegación de competencias."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="459" width="400" height="80" uuid="55f885f2-aec0-4e64-94c5-b9b74a806fd0">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["PRIMERO.- Que el "+$P{nombreCentroCompleto}+" tiene entre sus fines el acercar la formación reglada a la realidad social y profesional de nuestro entorno mediante el establecimiento de relaciones con instituciones externas que permitan completar el proceso formativo con la puesta en práctica de los conocimientos teóricos adquiridos, para el desarrollo del módulo profesional de Formación en centros de trabajo, que forma parte del currículo de las enseñanzas de Formación Profesional."]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="79" y="39" width="90" height="25" uuid="2ec7f545-a75b-417e-bde4-46bb4f873b8c"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="79" y="41" width="90" height="23" uuid="306a2837-dfd7-40cd-80d3-4821e3f6bc31"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ANEXO 0B]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="173" y="39" width="297" height="25" uuid="f65c6e85-cc32-4b3d-88d3-89003ee6862b"/>
+			</rectangle>
+			<textField>
+				<reportElement x="186" y="40" width="274" height="24" uuid="11dee688-3016-4a44-8b8a-2cc70ad79602"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Convenio Nº " + $F{numeroConvenio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="91" width="400" height="60" uuid="8a270913-b0b1-4b34-b700-7b4a9d1119ef"/>
+				<textElement textAlignment="Justified">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONVENIO DE COOPERACIÓN EDUCATIVA ENTRE EL SERVICIO DE SALUD DE CASTILLA-LA MANCHA (SESCAM) Y EL "+$P{nombreCentroCompleto}+" PARA LA REALIZACIÓN DE PRÁCTICAS DEL ALUMNADO DE LA FAMILIA PROFESIONAL DE SANIDAD."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="188" width="399" height="21" uuid="364f6fa2-b607-4caf-89a3-adabbf3f827f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{descripcionFirma}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="793">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="792" width="98" height="1" uuid="52ae8721-6477-4d07-90b0-0e98c12b1fcd"/>
+			</break>
+			<staticText>
+				<reportElement x="80" y="328" width="400" height="14" uuid="aa9536f6-4dc5-4dc9-bd82-c05d5829cb3a">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SEGUNDA.- DESARROLLO DE LAS PRÁCTICAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="341" width="400" height="125" uuid="247c6323-cbb0-4199-a700-e5c57b515fed">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[El desarrollo de las prácticas estará sujeto al régimen que se establece en el presente convenio, así como en la Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional, la Ley 7/2010 de Educación en Castilla La Mancha, el Real Decreto 1147/2011, de 29 de julio, por el que se establece la ordenación general de la Formación Profesional del sistema educativo, los Decretos de la Comunidad Autónoma que establecen los currículos de los ciclos formativos correspondientes, y la ORDEN SSI/81/2017, de 19 de enero, por la que se publica el Acuerdo de la Comisión de Recursos Humanos del Sistema Nacional de Salud, por el que se aprueba el protocolo mediante el que se determinan pautas básicas destinadas a asegurar y proteger el derecho a la intimidad del paciente por los alumnos y residentes en Ciencias de la Salud.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="e7ed2d19-972b-41a2-8821-355ffafbae32"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="c7adeeae-6e5a-46fb-80d7-116f31e58900"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="509" width="400" height="123" uuid="77d67b18-61a1-4e96-8ebc-44a0cd157b29">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Con carácter previo al inicio del acto asistencial el profesional responsable del mismo informará al paciente o a su representante sobre la presencia de estudiantes, solicitando su consentimiento verbal para que presencien las actuaciones clínicas. Dicho consentimiento se deberá reiterar en caso de realizar exploraciones físicas. Los alumnos estarán supervisados en todo momento, no pudiendo acceder al paciente ni a la información clínica sobre el mismo, sin la supervisión directa del personal del centro asistencial que sea responsable de su formación, tal como establece la Orden SSI/81/2017, de 19 de enero, por la que se publica el Acuerdo de la Comisión de Recursos Humanos del Sistema Nacional de Salud, por el que se aprueba el protocolo mediante el que se determinan pautas básicas destinadas a asegurar y proteger el derecho a la intimidad del paciente por los alumnos y residentes en Ciencias de la Salud.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="633" width="400" height="50" uuid="56266f08-d5ae-403f-879e-06641f50a2c6"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Con la finalidad de garantizar el respeto a la intimidad y confidencialidad de los datos de salud, los alumnos solo podrán acceder a la historia clínica en los términos previstos por el artículo 16.3 de la LBAP que requiere la previa disociación de los datos clínicos de los personales, para garantizar su anonimato.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="692" width="400" height="15" uuid="f0a11ccf-9aea-43b2-9e38-6d1d8ad12784">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[TERCERA.- DERECHOS Y DEBERES DE LOS ESTUDIANTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="28" width="400" height="20" uuid="d199288e-967d-428e-8145-090e7465d339"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CLÁUSULAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="49" width="400" height="14" uuid="3457a2a8-b09b-4845-b88a-04c11fb58771">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[PRIMERA.- OBJETO Y ÁMBITO DE APLICACIÓN DEL CONVENIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="196" width="400" height="129" uuid="bfb641ed-1040-4e27-be85-e321f578f2f5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Los alumnos incluidos en el ámbito de aplicación de este convenio, llevarán a cabo sus prácticas en calidad de estudiantes, por lo que su relación con el SESCAM es formativa, no suponiendo compromiso adicional a lo establecido en el convenio. Dado el carácter formativo de las prácticas académicas, de su realización no se derivarán, en ningún caso, obligaciones propias de una relación laboral, ni su contenido podrá dar lugar a la sustitución de la prestación laboral propia de puestos de trabajo. Asimismo, y en el caso de que al término de los estudios el estudiante se incorporase a la plantilla del SESCAM, el tiempo de las prácticas no se computará a efectos de antigüedad o reconocimiento de servicios previos, ni eximirá del período de prueba, salvo que en el oportuno convenio colectivo o nueva normativa aplicable estuviera expresamente estipulado algo distinto.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="81" y="467" width="401" height="40" uuid="31b0f444-7510-4041-a2c0-7a67131cb6a5"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["El "+$P{nombreCentroCompleto}+" presentará un proyecto formativo en el que se contemplarán los detalles concretos de cada una de las prácticas y los tutores asignados para las mismas, se fijarán los objetivos educativos y las actividades a desarrollar."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="711" width="401" height="38" uuid="bfc27e70-19d2-477e-8d12-4937a092fc40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["El "+$P{nombreCentroCompleto}+" deberá informar a los estudiantes de sus derechos y deberes, previamente a su incorporación:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="64" width="401" height="90" uuid="89884256-5e59-420e-ad99-049a72b4b5cc"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["El objeto del presente convenio es permitir la realización de las prácticas a los alumnos matriculados en el ciclo formativo de "+$P{familia}+" del "+$P{nombreCentroCompleto}+", en los centros sanitarios del SESCAM, con el fin de contribuir a la formación integral de los estudiantes, complementando su aprendizaje teórico y práctico, facilitar el conocimiento de la metodología de trabajo adecuada a la realidad profesional y favorecer el desarrollo de competencias técnicas, metodológicas, personales y participativas que les preparen para el ejercicio de actividades profesionales."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="81" y="155" width="400" height="38" uuid="01a24d82-6a23-4aff-879c-d5f6a7624152">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[El SESCAM ofrecerá las plazas de prácticas en el número, duración y periodicidad que estime oportuno según las necesidades organizativas y la capacidad docente de la que disponga.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="258de190-a9ab-4798-9fe1-21927e11aae5"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="a3dcadec-32e1-4dcb-ad80-b5530c55478f"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="79" y="348" width="400" height="13" uuid="72b19b22-45f0-431f-a780-3bfb6f8cd803">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Derechos del alumno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="428" width="400" height="30" uuid="8f23e84f-7a4d-447a-96f8-2956191b14c7"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[c) A la obtención de un informe por parte del centro sanitario, con mención expresa de la actividad desarrollada, su duración y, en su caso, su rendimiento.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="462" width="400" height="30" uuid="7d4024a5-3794-412f-b33a-eeb733ed7530"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[d) A recibir, por parte del centro sanitario del SESCAM información de la normativa de seguridad y prevención de riesgos laborales.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="492" width="400" height="30" uuid="f0e81daf-46f7-411e-8d04-732ea003f0a0"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[e) A cumplir con su actividad académica, formativa y de representación y participación, previa comunicación con antelación suficiente a la entidad colaboradora.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="522" width="400" height="40" uuid="f8339d85-f6e2-4313-bf81-01ffdc73f272"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[f) A disponer de los recursos necesarios para el acceso de los estudiantes con discapacidad a la tutorización, a la información, a la evaluación y al propio desempeño de las prácticas en igualdad de condiciones.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="562" width="400" height="30" uuid="43678cb5-a431-4b30-9c00-fdec13dab29e"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[g) A disponer del régimen de permisos a que tenga derecho con arreglo a la normativa vigente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="79" y="597" width="400" height="14" uuid="c2b974d1-5419-49bb-826b-3aeac1fcda47">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CUARTA.- COMPROMISOS DE LAS PARTES ]]></text>
+			</staticText>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="aa975024-f7d8-4f82-8de4-95a1f6d10c99"/>
+			</break>
+			<staticText>
+				<reportElement x="80" y="22" width="400" height="20" uuid="1e8232ff-4904-48ac-920b-df3780734eee"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Obligaciones del alumno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="70" width="400" height="28" uuid="9830c521-2a07-42f7-be7a-23d8c9f6ae30">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[b)  Conocer y cumplir el Proyecto Formativo de las prácticas, siguiendo las indicaciones del tutor asignado por el SESCAM bajo la supervisión del tutor académico.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="152" width="400" height="40" uuid="d93284ac-2f9c-4e67-8eea-87905864aa15"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[d)  Incorporarse al centro sanitario del SESCAM en la fecha acordada, cumplir el horario previsto en el proyecto educativo y respetar las normas de funcionamiento interno, seguridad y prevención de riesgos laborales de la misma.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="193" width="400" height="30" uuid="7512e122-6e21-4868-95d1-98052b373742"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[e) Colocar en lugar visible de su uniforme la tarjeta identificativa facilitada por el centro sanitario, que será devuelta una vez finalizado su período formativo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="224" width="400" height="51" uuid="5036b337-6f25-45ab-af79-9c9e86a01605">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[f)  Guardar confidencialidad en relación con la información interna del centro sanitario del SESCAM y guardar secreto profesional sobre sus actividades, durante su estancia y una vez finalizada ésta. La confidencialidad es extensible incluso en caso de fallecimiento de los pacientes.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="42" width="401" height="27" uuid="af8d72d3-f360-4ef9-aa1d-e0820698df9a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["a) Cumplir la normativa vigente relativa a prácticas externas establecida por el "+$P{nombreCentroCompleto}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="98" width="400" height="52" uuid="d8cd59aa-2797-41b9-a12f-028d4db9e8d9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["c) Mantener contacto con el tutor académico del "+$P{nombreCentroCompleto}+" durante el desarrollo de la práctica y comunicarle cualquier incidencia que pueda surgir en el mismo, así como hacer entrega de los documentos e informes de seguimiento intermedio y la memoria final que le sean requeridos."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="79" y="276" width="400" height="40" uuid="aad668bd-1d0f-4923-8002-c732a99f2379"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["g) En caso de ausencia a las prácticas será necesario comunicarlo y justificarlo tanto al responsable asignado en el servicio como a la Secretaría de docencia del centro sanitario y a los responsables del "+$P{nombreCentroCompleto}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="316" width="400" height="27" uuid="005c4209-237d-4575-9432-4e8f29f6a968">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["h) Realizar una memoria (informe) de las actividades desarrolladas durante el periodo de prácticas a la secretaría de docencia y al "+$P{nombreCentroCompleto}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="362" width="400" height="40" uuid="3129e05a-ed52-492b-aa79-f42423a50cc5"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["a) A la tutela, durante el período de duración de la correspondiente práctica, por un profesor del "+$P{nombreCentroCompleto}+" y por un profesional que preste servicios en el centro sanitario del SESCAM donde se realice la misma."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="403" width="400" height="26" uuid="18dd4867-a0a4-41a6-a9b1-4ad6cd30a9d6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["b) A la evaluación de acuerdo con los criterios establecidos por el "+$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="612" width="400" height="20" uuid="cba85128-0128-4df7-95f2-2a35ef1d2c5c"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Obligaciones del "+$P{nombreCentroCompleto}+":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="632" width="400" height="48" uuid="108afddb-c411-469b-999d-f45be0bfe153"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["1.- Designar un tutor académico de acuerdo con los procedimientos establecidos por el "+$P{nombreCentroCompleto}+" que colabore con el responsable del centro sanitario del SESCAM en el cumplimiento de la programación de actividades formativas. "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="680" width="400" height="50" uuid="26c1aafe-553e-442c-8555-6bf26ed82ac3"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["2.- Elaborar una relación de alumnos y del tutor o tutores designados, y un calendario de prácticas. Asimismo, escoger la vía de comunicación preferente entre el "+$P{nombreCentroCompleto}+" y el centro sanitario del SESCAM."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="d59fbbb1-c0c1-47d7-b45b-ece57d192920"/>
+			</break>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="69865e4f-82d1-4dd5-8cd6-e08c0cc58464"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="46a09504-1519-4a54-adff-3265ec1ad981"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="81" y="290" width="400" height="14" uuid="b2a7fbe1-6186-4b11-8389-ae7396bc937b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2.- Informar a dicho tutor de la normativa que regula las prácticas externas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="306" width="400" height="19" uuid="6e78cc79-e5c5-4016-80b4-54ff60b9cc7f"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3.- Facilitar el cumplimiento de la práctica a desarrollar por parte del alumno.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="325" width="400" height="30" uuid="b8f870b6-69f7-4021-b0ae-24fe8436206c"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[4.- Proporcionar al alumno una tarjeta identificativa donde consten sus datos personales, la fotografía y la referencia al grupo que pertenece.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="355" width="400" height="51" uuid="96fad366-c707-42b1-af96-4fd9fcfe069e">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[5.- Velar por la plena integración del alumno en la dinámica asistencial, por la asunción y cumplimiento de la normativa que rige su funcionamiento y en especial la relacionada con su uniformidad e identificación y con el cumplimiento de los principios éticos y normas básicas de actuación.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="406" width="400" height="40" uuid="25a717dd-80b4-4368-9b58-f032ea99b105">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[6.-Inscribir al alumno en el “libro de Registro de alumnos en formación”, que será accesible desde cualquier servicio asistencial que quiera constatar que el alumno está autorizado para permanecer en el centro.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="445" width="400" height="30" uuid="309303be-aab4-4a33-85e8-2b9f7a03c229"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[7.- Emitir, a la finalización de las prácticas, un certificado por el que se reconozca al alumno el tiempo y contenido de prácticas realizado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="483" width="400" height="13" uuid="0f2e2ac9-5520-4612-a57e-76ff1c47f3d0">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[QUINTA.- SEGUROS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="497" width="400" height="16" uuid="d5373aaf-5174-4156-a49a-70eb81ffe3cf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[La cobertura de riesgos de los estudiantes se ajustará a lo siguiente:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="643" width="400" height="14" uuid="b137f67e-5e11-4a85-b9d0-5cb15977348b">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SEXTA.- RÉGIMEN DE PERMISOS Y REQUISITOS DE LAS PRÁCTICAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="169" width="400" height="51" uuid="964b43bd-fbf8-4580-8816-035b2b37cdf1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[7.- Asumir, a través de la Consejería de educación, Cultura y Deportes, cuando se desarrolle normativamente, el coste de la cotización a la Seguridad Social establecida por la Disposición Adicional Quinta del Real Decreto Ley 28/2018, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="226" width="400" height="13" uuid="8d023abf-b133-4eeb-aaae-40dab3d07edb">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Obligaciones del SESCAM:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="239" width="400" height="51" uuid="bf05805e-7a3b-40fe-95d2-4ef24537902e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[1.- Nombrar un responsable (tutor) encargado de supervisar, valorar e informar la estancia y las prácticas formativas del alumno durante su estancia en el centro, que deberá ser una persona vinculada al mismo, con experiencia profesional y con los conocimientos necesarios para realizar una tutela efectiva.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="28" width="400" height="39" uuid="6765cb36-e1d3-4ac1-932e-158d5a1f8336"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3.- Informar a los alumnos de los contenidos del presente convenio, requiriendo de los mismos el consentimiento respecto a las obligaciones contenidas en la cláusula cuarta de este convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="69" width="400" height="30" uuid="350cb8d9-8467-4ef6-bf9e-d03a7061f6b5"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[4.- Informar al tutor del centro sanitario del proyecto formativo y de las condiciones de su desarrollo.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="99" width="400" height="31" uuid="44dddf8a-0d50-4e8c-a654-40ff1c7c668d"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["5.- Facilitar al tutor del centro sanitario el acceso al "+$P{nombreCentroCompleto}+" para obtener la información y apoyo necesario para el cumplimiento de sus fines."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="130" width="400" height="39" uuid="3fdee55f-3f24-4618-9e42-3b2a9c149f69"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["6.- Emitir un certificado anual relativo a la condición y participación docente de los tutores del centro sanitario del SESCAM en las prácticas de los alumnos del "+$P{nombreCentroCompleto}+"."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="515" width="400" height="55" uuid="d14aa7dc-41b6-4a1b-b4b3-6606a4eefa25"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["      a) Todos los alumnos menores de 28 años que estén matriculados en alguna de sus enseñanzas, oficiales o propias, están cubiertos por el seguro escolar y por una póliza de seguro de responsabilidad civil cuyos gastos son asumidos por el "+$P{nombreCentroCompleto}+", a través de la Consejería de educación, Cultura y Deportes."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="570" width="400" height="66" uuid="8b8ac1a7-2024-4a7d-a08a-b94d9f01e720"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["      b) En el caso de los alumnos mayores de 28 años, el "+$P{nombreCentroCompleto}+" gestionará y asumirá la suscripción de la póliza de seguro de accidentes y responsabilidad civil, debiendo entregar a la secretaría de docencia del centro sanitario del SESCAM, antes del inicio del periodo de prácticas, un certificado emitido por la compañía aseguradora acreditativo de dicho extremo. "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="656" width="400" height="51" uuid="f5b370ce-f042-489a-abb6-36ef9b6eeca9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["El horario, actividades a realizar, régimen de permisos y demás condiciones que se consideren necesarias para la realización de las prácticas serán fijadas de común acuerdo por los representantes del "+$P{nombreCentroCompleto}+" y del centro sanitario."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="a540bc73-8e49-4174-9d87-9d7d5edb7ab0"/>
+			</break>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="5cb7ab29-4865-4cae-a611-381aa30e25f1"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="c65e6977-fdd2-4c25-bb95-42a3e142933c"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="80" y="222" width="400" height="126" uuid="a9405b76-a345-4f26-a0b5-122607e9e813">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[El centro docente no podrá acceder a los datos personales que figuren en los archivos, documentos y sistemas informáticos del SESCAM. En caso de hacerlo de forma casual, estará obligado a guardar secreto incluso después de la finalización de la relación contractual, sin que en ningún caso pueda utilizar los datos ni revelarlos a terceros. La entidad firmante deberá poner en conocimiento de sus alumnos lo dispuesto en esta cláusula y conservar la acreditación del cumplimiento de este deber. Asimismo, la entidad firmante deberá poner inmediatamente en conocimiento del SESCAM, y en cualquier caso antes del plazo de 24 horas, cualquier incidencia que se produzca durante la ejecución del convenio que conlleve un acceso accidental o incidental a datos de carácter personal. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="348" width="400" height="14" uuid="676dd10b-12ae-42a6-ba5d-d3ba7abe401b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[El incumplimiento de este deber será causa de resolución del presente convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="361" width="400" height="39" uuid="40960a63-e182-4326-a506-22b0b1565b60"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Se incorpora como anexo a este convenio un compromiso de confidencialidad que deberá ser suscrito por los alumnos al inicio de su estancia en el centro sanitario y que constará en el Libro Registro de Alumnos en formación del centro sanitario del SESCAM.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="400" width="400" height="51" uuid="c94668a3-e7b3-4d9b-8ae2-892bd488aa96">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Los datos personales de los alumnos que se recojan como consecuencia de la ejecución del presente Convenio, serán incorporados a los ficheros de datos responsabilidad de las partes firmantes, y serán tratados únicamente a los efectos de llevar a buen fin el presente Convenio. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="452" width="400" height="76" uuid="344d9008-cec6-42f5-a8ff-12c7217390fc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Los titulares de los datos pueden ejercitar los derechos de acceso, rectificación o supresión de sus datos ante la persona titular de la Dirección General de RRHH del SESCAM, en cualquier momento, en Avenida Río Guadiana nº 4, 45071 Toledo, o mediante tramitación electrónica. Para cualquier cuestión relacionada con esta materia, puede dirigirse a las oficinas de información y registro o al correo electrónico protecciondatos@jccm.es. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="531" width="400" height="14" uuid="f80fae48-b567-4fda-9b74-fa6ebca21dfc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[OCTAVA.- PROTECCIÓN DEL MENOR.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="599" width="400" height="14" uuid="9785a008-6d2f-4f5a-8e98-d189abc75964">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[NOVENA. - FINANCIACIÓN  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="684" width="400" height="70" uuid="e286f47e-d3ae-49c4-aa8c-20867e5fa7aa"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cuando se desarrolle normativamente, el coste de la cotización a la Seguridad Social establecida por la Disposición Adicional Quinta del Real Decreto Ley 28/2018, para la revalorización de las pensiones públicas y otras medidas urgentes en materia social, laboral y de empleo publicado en el BOE núm. 314, de 29/12/2018, corresponderá al centro educativo, a través de la Consejería de educación, Cultura y Deportes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="46" width="400" height="39" uuid="8cf13329-4bc5-44b5-b020-0748171afc87"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Las entidades firmantes se obligan al cumplimiento de la normativa nacional y de la Unión Europea en materia de protección de datos vigente en cada momento. Dicha normativa está constituida fundamentalmente por las siguientes disposiciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="86" width="400" height="53" uuid="5a092a21-5fb0-4fda-994e-6192755b44ac">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-   Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (Reglamento General de Protección de Datos)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="140" width="400" height="26" uuid="0d9825df-65eb-49cb-b87d-710fe46f0ac7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-  Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales (BOE del 06-12-2018).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="168" width="400" height="30" uuid="4ea9d22e-bba6-4f07-b542-fef07af59ab8"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-   Ley 41/2002, de 14 de noviembre, básica reguladora de la autonomía del paciente y de derechos y obligaciones en materia de información y documentación clínica.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="197" width="400" height="26" uuid="22845cf0-70d6-469a-a34b-762f4e24000a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-   Ley 5/2010, de 24 de junio, sobre derechos y deberes en materia de salud de Castilla-La Mancha.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="31" width="400" height="14" uuid="e636998a-87ba-4bc0-9970-fab63e6b9a46">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SÉPTIMA.- PROTECCIÓN DE DATOS DE CARÁCTER PERSONAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="545" width="400" height="54" uuid="c02b8009-d2ec-4e95-bed5-9c8e11c0b322">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Los responsables del centro sanitario exigirán la certificación negativa del Registro Central de Delincuentes Sexuales de los alumnos, siendo los responsables del "+$P{nombreCentroCompleto}+" los encargados de recabar a sus alumnos la citada certificación negativa e informar de ello a la Gerencia donde realicen las prácticas."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="613" width="400" height="70" uuid="19b50bac-94e1-4a7d-b9b0-209e5f22c89f"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["Al tratarse de un Convenio firmado con un centro docente de titularidad pública o sin ánimo de lucro (acreditado oficialmente) y se refiere a enseñanzas de Formación Profesional, el SESCAM no percibirá del "+$P{nombreCentroCompleto}+", en concepto de compensación, ninguna cantidad para contribuir a la financiación por los gastos de funcionamiento y del personal."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="6b24e6d2-9a9a-4bb0-88da-86f372fb4cc1"/>
+			</break>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="176779b2-590f-4e73-9ea5-0cba2b8eaa0d"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="9484d699-9d60-4220-9302-aeaaaedcb06f"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="82" y="212" width="400" height="51" uuid="597de9c7-1212-42b2-83e5-edfeea1b6036"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	d) Para el desempeño de sus funciones, la Comisión de Seguimiento se reunirá cuantas veces sean procedentes, recabando, cuando sea preciso, los pertinentes informes a los equipos técnicos correspondientes, y levantando la correspondiente acta de la sesión correspondiente reuniéndose de forma ordinaria con periodicidad anual  ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="264" width="400" height="39" uuid="8644da95-7a30-42c1-a0fe-f93f084b89b2"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	e) En todo lo no previsto en el presente Convenio, la Comisión de Seguimiento se regirá por la regulación que para los órganos colegiados establece la Ley 40/2015, de 1 de octubre de Régimen Jurídico del Sector Público]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="311" width="400" height="14" uuid="f9cb5b42-20d3-4b99-bc22-a7448d3de77b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[UNDÉCIMA.- MODIFICACIÓN DEL CONVENIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="326" width="400" height="39" uuid="2b2287cd-d091-4b96-b255-d3c2fed45257"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Los términos del presente convenio podrán ser modificados de mutuo acuerdo entre las partes, previa propuesta de la comisión de seguimiento. La modificación se incorporará al texto del convenio, como una adenda al mismo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="371" width="400" height="14" uuid="5d416bae-ee08-4a9c-892b-45ea6a371268">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DUODÉCIMA.- VIGENCIA Y PRÓRROGA DEL CONVENIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="441" width="400" height="39" uuid="c09d2ea1-8cfa-4e1c-90f9-340460664488"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[En todo caso, la duración de este convenio no podrá ser superior a cuatro años conforme a lo dispuesto en el artículo 49 h) de la Ley 40/2015, de 1 de octubre de Régimen Jurídico del Sector Público.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="481" width="400" height="30" uuid="746de4ab-22ce-4a9f-a992-1ed465d049d7"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Por su parte, la eficacia de este convenio quedará supeditada a lo dispuesto en el artículo 48.8 de la Ley 40/2015, de 1 de octubre de Régimen Jurídico del Sector Público.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="518" width="400" height="14" uuid="61e44f09-4777-45e1-929d-87afb561f646">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DECIMOTERCERA.- EXTINCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="532" width="400" height="39" uuid="0708547c-ff20-4688-9007-d26c3a1501fb"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[El presente convenio se extinguirá por el cumplimiento de las actuaciones que constituyen su objeto, o por incurrir en alguna de las causas de resolución que dispone el artículo 51 de la Ley 40/2015, de 1 de octubre.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="575" width="400" height="14" uuid="b014c3ad-3e16-4b82-87d6-07dbd6102918">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Serán causa de resolución de este convenio:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="591" width="400" height="20" uuid="71927c1b-b5c6-4256-ade8-768757c30150"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- El transcurso de su plazo de vigencia sin haberse acordado la prórroga.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="612" width="400" height="20" uuid="84afbe1e-abd0-47b4-a092-c7366e2ef07c"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- El acuerdo unánime de todos los firmantes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="632" width="400" height="110" uuid="a24c9247-4b4e-4ca4-b536-25ae25ff4b3c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- El incumplimiento de las obligaciones y compromisos asumidos por alguna de las partes. En este caso, cualquiera de las partes podrá notificar a la parte incumplidora un requerimiento para que cumpla en un determinado plazo con las obligaciones o compromisos que se consideran incumplidos. Este requerimiento será comunicado al responsable del mecanismo de seguimiento, vigilancia y control de la ejecución del convenio y a las demás partes firmantes. Si trascurrido el plazo indicado en el requerimiento persistiera el incumplimiento, la parte que lo dirigió notificará a las partes firmantes la concurrencia de la causa de resolución y se entenderá resuelto el convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="125" width="400" height="15" uuid="090ff255-db2a-4b3b-a221-26e748157579">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3.- Esta comisión tendrá las funciones siguientes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="141" width="400" height="19" uuid="c88282e5-055b-443d-90b9-dcecf986ee6e"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	a) Interpretar, en caso de duda, el contenido del convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="161" width="400" height="30" uuid="8b7d747e-f9b5-450e-851e-120fa977ef14"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	b) El seguimiento de las actuaciones realizadas en el marco del convenio, pudiendo modificarse, por circunstancias sobrevenidas, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="192" width="400" height="19" uuid="aaded53c-9b4b-42ac-965d-5ec98494802a"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	c) Cuantas otras se consideren oportunas para la mejor ejecución del convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="27" width="400" height="14" uuid="25325b08-9c34-4646-a388-919db27388f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DÉCIMA.- COMISIÓN DE SEGUIMIENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="94" width="400" height="30" uuid="f816a8b2-7489-45df-8d66-be13e944f936"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2.- La comisión de seguimiento estará presidida por la persona que ostente la titularidad de la Dirección-Gerencia del SESCAM, o persona en quien delegue.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="41" width="400" height="52" uuid="83abf49f-9c50-4d8a-a208-9723cad78e82">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["1.- Se constituirá una comisión de seguimiento del convenio, compuesta por un máximo de un representante de cada una de las partes firmantes, por un miembro del centro sanitario del SESCAM y otro del "+$P{nombreCentroCompleto}+" para el desarrollo de las acciones cuya ejecución se asume en el mismo."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="386" width="400" height="53" uuid="66178c7e-1f2a-40eb-b672-995bb291aed2"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression><![CDATA["El presente convenio entrará en vigor en el momento de su firma, y tendrá una duración de "+$P{yearVigencia}+" años. En cualquier momento antes de la finalización del plazo previsto, los firmantes del convenio podrán acordar unánimemente su prórroga por un periodo de hasta cuatro años o su extinción."]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="d801a4d9-b147-4e86-b8c9-347df2cd1d1d"/>
+			</break>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="0d03882a-5461-4326-9af8-acd7364b08f3"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="59a7bfec-ef5d-4636-8984-c059456dd899"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="82" y="185" width="400" height="41" uuid="2e33bc49-01dc-4ef2-996e-91af4c778c02">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[No se prevén posibles indemnizaciones, en el supuesto de que el convenio se resuelva por incumplimiento de las obligaciones y compromisos asumidos por cada una de las partes.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="226" width="400" height="40" uuid="2482be8e-10c9-4b31-99af-05b9d0b9d465"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[En caso de incumplimiento de las obligaciones y compromisos asumidos por las partes firmantes, se procederá de conformidad con lo previsto en los artículos 49 e) y 51.2. c) de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="268" width="400" height="16" uuid="5507d7e2-4adb-4c6c-9858-f8143535023e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[DÉCIMOCUARTA.- NATURALEZA DEL CONVENIO Y JURISDICCIÓN ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="285" width="400" height="89" uuid="758e2c64-505e-49f8-afa0-71a708c8ddcf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Este Convenio tiene naturaleza administrativa y se encuentra excluido del ámbito de aplicación de la Ley 9/2017, de 8 de noviembre,  de Contratos del Sector Público, por la que se trasponen al ordenamiento jurídico español las Directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014, conforme a cuanto disponen los artículos 4 y 6 de la misma, sin perjuicio de que sus principios resulten aplicables para la resolución de las dudas o lagunas que pudieran plantearse en la aplicación del mismo. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="378" width="400" height="67" uuid="e388a2ca-1de3-4e72-9aac-a92edc4478cb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[En todo caso, las cuestiones litigiosas que pudieran surgir, sin perjuicio de las facultades de la Comisión de Seguimiento para resolver los problemas de interpretación y cumplimiento del convenio, de conformidad con la Ley 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso-administrativa, serán de conocimiento y competencia del orden jurisdiccional contencioso-administrativo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="448" width="400" height="40" uuid="82362946-cdf1-4219-8377-bebd482e8a5b"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Las cuestiones litigiosas surgidas sobre la interpretación, ejecución, modificación, resolución y efectos que pudieran derivarse de la aplicación del mismo, deberán solventarse de mutuo acuerdo de las partes. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="489" width="400" height="51" uuid="b3387143-af2a-4c83-8a75-01d535f9176d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Si no resultare posible alcanzar dicho acuerdo, las cuestiones litigiosas serán de conocimiento y competencia del Orden Jurisdiccional contencioso-administrativo, de conformidad con lo previsto en la Ley 29/1998, de 13 de julio, reguladora de dicha jurisdicción. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="574" width="400" height="30" uuid="49976b33-aa88-4fbf-afcf-ec284de15807"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Y en prueba de conformidad, las partes intervinientes firman el presente convenio por triplicado en el lugar y fecha indicados en el encabezamiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="624" width="400" height="30" uuid="c0d3ac53-c75f-46ae-a61d-7033f4850596"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Por el (Centro Docente)				 Por el SESCAM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="30" width="400" height="30" uuid="d3a4d8b0-124c-4136-8d64-7df90e497eda"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- La imposibilidad sobrevenida, legal o material, de cumplir las obligaciones derivadas del objeto del convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="60" width="400" height="30" uuid="06647368-db47-4648-981a-714e3c6271e3"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- La denuncia expresa por cualquiera de las partes firmantes del convenio comunicada con tres meses de antelación a la fecha en que se pretenda su expiración.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="90" width="400" height="20" uuid="3011a14c-711f-43eb-98aa-1fd183b9ede4"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- Decisión judicial declaratoria de la nulidad del convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="110" width="400" height="30" uuid="63a67777-3bcb-4d7d-b7f6-cb99c2ce0a86"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[	- Por cualquier otra causa distinta de las anteriores prevista en el convenio o en otras leyes. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="145" width="400" height="39" uuid="69c44425-15fb-428c-899b-88b2e90931cb"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[La finalización anticipada no deberá afectar, en ningún caso, a las acciones ya iniciadas, a cuyo efecto ambas partes se obligan a cumplir los compromisos asumidos hasta la fecha en que ésta se produzca.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="742" width="167" height="20" uuid="e6f6ec86-319d-47d1-bb27-7f8354d0362c"/>
+				<text><![CDATA[El Director o Directora del Centro Docente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="700" width="27" height="20" uuid="504e650f-2545-474f-95aa-8d0f64524d63"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="108" y="701" width="204" height="40" uuid="6ea1b1d9-e4f2-471a-b774-9a8557298a36">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{empleado.nombre}.concat( " " ).concat($F{empleado.apellido1}).concat(" ").concat($F{empleado.apellido2})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="703" width="28" height="19" uuid="a578a9b4-67a8-4241-9652-3b54e0630d8c"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<break>
+				<reportElement x="0" y="797" width="98" height="1" uuid="3826191e-9ac9-4852-bea9-cacf0ca5b040"/>
+			</break>
+			<image>
+				<reportElement x="0" y="1" width="70" height="70" uuid="2dbb3dd9-38be-4d8e-b399-43e4ab179d28"/>
+				<imageExpression><![CDATA["assets/imagesPDF/castillaLaMancha.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="500" y="0" width="50" height="50" uuid="39059ea6-a63b-4c86-a291-4c271a9cf902"/>
+				<imageExpression><![CDATA["assets/imagesPDF/sescam.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="79" y="30" width="400" height="20" uuid="1b783d1d-081b-459c-b7b9-58ed613428b9"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ANEXO: COMPROMISO DE CONFIDENCIALIDAD DESTINADO AL ALUMNADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="400" height="50" uuid="7b31708e-a4dc-4268-99ae-ed411239dbef"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[D/Dña………………………………………………………………..………………… con DNI/NIF/NIE. ………………………. tiene la condición de personal en formación en régimen de alumnado en el Centro Sanitario………………………………………………….………….., como: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="110" width="400" height="30" uuid="4d0596cc-e6f5-4763-ad4e-dc5b1d836cf9"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[-	Estudiante de Formación Profesional de la familia profesional de Sanidad, en el ciclo formativo: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="185" width="400" height="20" uuid="f8cfcce2-84f7-4114-a7bc-bb7c792d813f"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Declara que, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="204" width="400" height="38" uuid="6ed777ad-21f3-4a00-8be8-b8e511e88c5c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[1. Reconoce que los pacientes tienen derecho al respeto de su personalidad, dignidad humana e intimidad y a la confidencialidad de toda la información relacionada con su proceso. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="242" width="400" height="38" uuid="781a809c-5b6d-4143-8230-e364eb558820">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2. También reconoce que los pacientes tienen derecho a que se respete el carácter confidencial de los datos referentes a su salud, y a que nadie pueda acceder a ellos sin previa autorización. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="281" width="400" height="79" uuid="0385d7e5-87ff-4ce8-b776-2cee9cf8a732"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3. De acuerdo con la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y Garantía de los Derechos Digitales, reconoce que tiene el deber de mantener secreto respecto a la información a la que acceda en el desarrollo de su actividad, comprometiéndose a prestar el máximo cuidado y confidencialidad en el manejo y custodia de cualquier información/ documentación durante su periodo formativo y una vez concluido el mismo. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="360" width="400" height="51" uuid="03b34d1a-aa9b-4065-aba3-a698ce52cf7d"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[4. Reconoce que no procede transferir, duplicar o reproducir todo o parte de la información a la que tenga acceso con motivo de su actividad en el Centro, no pudiendo utilizar los datos proporcionados por el mismo para finalidades distintas a la formación, o aquellas otras para las que fuera autorizado por la dirección del Centro. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="412" width="400" height="39" uuid="996e1c20-86c9-4d1b-a8c6-fcfd345a2a55"/>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[5. Conoce y acepta el Protocolo mediante el que se determinan pautas básicas destinadas a asegurar y proteger el derecho a la intimidad del paciente por los alumnos relacionados con las Ciencias de la Salud. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="451" width="400" height="38" uuid="8d01ac97-5983-40b2-a36f-aad648aa89f8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[6. Está enterado de que es responsable personal de acatar el deber de confidencialidad y de que su incumplimiento puede tener consecuencias penales, disciplinarias o incluso civiles. ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="488" width="400" height="38" uuid="10fa3a4c-7024-4679-900f-89d55454ae3a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" rotation="None">
+					<font fontName="SansSerif" isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Por todo ello se compromete a que su conducta en el Centro Sanitario se adecue a lo previsto en los apartados anteriores de esta declaración responsable, que se suscribe por duplicado, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="598" width="400" height="19" uuid="a17a4097-6086-48d4-893b-2f3c05f11369"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fdo.: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="233" y="618" width="244" height="19" uuid="57f10f67-9f19-46f9-bef2-108ac8521e1d"/>
+				<textElement textAlignment="Left" rotation="None">
+					<font isBold="false" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[□ Ejemplar interesado	□ Ejemplar Centro Sanitario]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="142" width="140" height="21" uuid="478e5060-54db-4d20-a76a-6bdffec33d26"/>
+				<textFieldExpression><![CDATA[$P{isCicloSuperior}.equals("S") ? "Grado superior en: " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="142" width="253" height="21" uuid="67df69b1-aa68-4845-8fa0-cb9501f1c263"/>
+				<textFieldExpression><![CDATA[$P{familia}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="142" width="140" height="21" uuid="0ef32dfd-40b5-4605-91e0-63683c08d22b"/>
+				<textFieldExpression><![CDATA[$P{isCicloSuperior}.equals("N") ? "Grado medio en: " : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="143" width="105" height="40" uuid="2bfeccaf-aca3-4b4f-a080-af02304f7458"/>
+				<textFieldExpression><![CDATA[$P{isCicloSuperior}.equals("") ? "Grado medio en: Grado superior en:" : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="540" width="399" height="21" uuid="cad78001-baaa-4e7c-8a3a-cbc579f898d9"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{descripcionFirma}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

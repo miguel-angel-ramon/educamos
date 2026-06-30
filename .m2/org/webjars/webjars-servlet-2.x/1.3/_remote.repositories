@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jun 24 14:17:37 CEST 2025
+webjars-servlet-2.x-1.3-sources.jar>central=
+webjars-servlet-2.x-1.3.jar>central=
+webjars-servlet-2.x-1.3.pom>central=

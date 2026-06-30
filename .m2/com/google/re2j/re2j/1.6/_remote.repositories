@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:38:51 CEST 2025
+re2j-1.6-sources.jar>central=
+re2j-1.6.jar>central=
+re2j-1.6.pom>central=

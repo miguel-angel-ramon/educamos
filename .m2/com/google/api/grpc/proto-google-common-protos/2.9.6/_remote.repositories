@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Sep 19 13:07:35 CEST 2025
+proto-google-common-protos-2.9.6-sources.jar>central=
+proto-google-common-protos-2.9.6.jar>central=
+proto-google-common-protos-2.9.6.pom>central=

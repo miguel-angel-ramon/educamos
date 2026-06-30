@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 12:11:51 CEST 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1749895911098
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749895907549
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749895910998
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact com.jccm.edu\:mensajeria-axis\:jar\:javadoc\:1.1 from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1749895911046
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact com.jccm.edu\:mensajeria-axis\:jar\:javadoc\:1.1 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 409, reason phrase\:  (409)

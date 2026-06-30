@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="anexoV" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="094ae121-4cef-4b3d-a1fc-7b06ebabedd1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="centro" class="java.lang.String"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<parameter name="nif" class="java.lang.String"/>
+	<parameter name="tipoCurso" class="java.lang.String"/>
+	<parameter name="horasPFE" class="java.lang.Integer"/>
+	<parameter name="nAlumnos" class="java.lang.Integer"/>
+	<parameter name="horasConcur" class="java.lang.String"/>
+	<parameter name="dsMod" class="java.lang.String"/>
+	<parameter name="responsablesModulos" class="java.lang.String"/>
+	<parameter name="dsOrg" class="java.lang.String"/>
+	<parameter name="dsCara" class="java.lang.String"/>
+	<parameter name="tipo" class="java.lang.String"/>
+	<parameter name="alcance" class="java.lang.Integer"/>
+	<parameter name="ampliacion" class="java.lang.Integer"/>
+	<parameter name="horasCur" class="java.lang.Integer"/>
+	<parameter name="lgModalidad" class="java.lang.Integer"/>
+	<parameter name="horasComPFE" class="java.lang.String"/>
+	<parameter name="dsBeca" class="java.lang.String"/>
+	<parameter name="lgAut400" class="java.lang.Integer"/>
+	<parameter name="lgAutForCom" class="java.lang.Integer"/>
+	<parameter name="lgAutCurEsp" class="java.lang.Integer"/>
+	<parameter name="lgAut3Cur" class="java.lang.Integer"/>
+	<parameter name="lgAutCamReg" class="java.lang.Integer"/>
+	<parameter name="lgAutProens" class="java.lang.Integer"/>
+	<parameter name="autorizacion" class="java.lang.Integer"/>
+	<parameter name="modulos" class="java.lang.String"/>
+	<parameter name="lgDiario" class="java.lang.Integer"/>
+	<parameter name="lgSemanal" class="java.lang.Integer"/>
+	<parameter name="lgMensual" class="java.lang.Integer"/>
+	<parameter name="lgOtros" class="java.lang.Integer"/>
+	<parameter name="lgTipoCiclo" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="62">
+			<image>
+				<reportElement x="24" y="1" width="60" height="60" isPrintInFirstWholeBand="true" uuid="77370354-d392-4595-87a6-5708445de551"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="602">
+			<staticText>
+				<reportElement positionType="Float" x="113" y="3" width="370" height="21" uuid="5ea81e87-6ed5-49b4-9eef-250a7e164379"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ANEXO V]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="504" width="529" height="15" uuid="0c584e6e-329c-4e50-b57d-6fc12c9d3334">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Módulos profesionales dualizados: "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="22" y="27" width="531" height="60" uuid="086f943a-9c48-4ee1-b8aa-209299bc2912">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROGRAMA DEL PERIODO DE FORMACIÓN EN EMPRESA U ORGANISMO EQUIPARADO DEL CICLO FORMATIVO/CURSO DE ESPECIALIZACIÓN.
+]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="95" width="531" height="21" uuid="ad166c9c-b7f7-495d-a6fd-38ff266c4712">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Centro educativo: "+($P{centro}!=null?$P{centro}:"________________________________________________")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="117" width="220" height="21" uuid="a27bc1b9-7d34-4300-9ef0-4be2aa6ecaff">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Código del centro: "+($P{codigo}!=null?$P{codigo}:"____________")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="311" y="117" width="241" height="21" uuid="eb549b18-c4fb-48da-a04c-1f1353557de7"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["CIF: "+($P{nif}!=null?$P{nif}:"__________________")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="22" y="139" width="220" height="21" uuid="ad81a60f-88fd-4434-866d-52cbe71f3d75"/>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Tipo de centro" + $P{tipo}!=null?$P{tipo}:"_________________________"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="161" width="531" height="18" uuid="50d3b569-4930-4e5f-83e8-6127085c3ef7">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[($P{tipoCurso}!=null?$P{tipoCurso}:"Curso/Ciclo Formativo: ____________________________________")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="77" y="188" width="428" height="40" uuid="db3b2a24-f9aa-4059-ac20-350610f573b1"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Definición del Programa del periodo de formación en empresa u organismo equiparado."]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="240" width="529" height="30" uuid="f3ef3ded-79b6-412f-ab03-e50a8ad48ae5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Alcance del Programa de PFE*: " + "<br/>" +
+"*PFE (Periodo de formación en empresa u organismo equiparado)."]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="271" width="528" height="15" uuid="84a838ac-25c0-4faa-b0a0-eef755a93748">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$P{alcance}==1?"Todo el alumnado matriculado ":"El alumnado matrículado tendrá formatos de PFE diferentes "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="287" width="528" height="15" uuid="c0e277d4-2ee1-4fb4-aeb4-9e20d7627c8d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Número de alumnos : " +($P{alcance}==1?"Todos":($P{nAlumnos}!=null?$P{nAlumnos}:"______"))]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="303" width="528" height="15" uuid="6434f426-9d21-4bc0-9648-49b9780906c1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Modalidad: " + ($P{lgModalidad}!=null ? 
+    ($P{lgModalidad}==1 ? "General" : 
+     $P{lgModalidad}==2 ? "Intensiva" : "__________________") 
+    : "__________________")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkPeriodosFormacion" positionType="Float" isPrintRepeatedValues="false" x="22" y="334" width="13" height="10" isRemoveLineWhenBlank="true" uuid="1bf73042-a42d-44a5-bd1c-200ca6e31660">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkPeriodosFormacion"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="35" y="333" width="515" height="15" uuid="71d8860b-ebcd-4422-a3f4-1b809138b590">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["Periodos de formación en empresa, PFE"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="22" y="347" width="528" height="15" uuid="90eb869b-9990-4766-af08-c00d1207ae38">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Requiere ampliación a 3 cursos: " + ($P{ampliacion}==1?"SI":"NO")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="363" width="528" height="15" uuid="d079cb9e-808c-46d1-af26-7f68dcf9e119">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Horas totales del PFE: "+($P{horasPFE}!=null?$P{horasPFE}:"_______")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="378" width="528" height="15" isPrintInFirstWholeBand="true" uuid="a646aeee-57b5-4859-8f55-4fa75214509e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{lgTipoCiclo}==0]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Reparto horas del PFE por curso: "+($P{horasCur}!=null?$P{horasCur}:"_____")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkComplementario" positionType="Float" isPrintRepeatedValues="false" x="22" y="443" width="13" height="10" isRemoveLineWhenBlank="true" uuid="81ee2282-68ee-46f8-9229-714bb3749284">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkComplementario"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="34" y="442" width="516" height="15" uuid="cc3a85e3-cad8-4315-8800-66e1bd078cf1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA["Formación de carácter complementario: (especificar por curso)"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="456" width="529" height="15" uuid="4eadeb28-b892-41c2-b57e-573091972155">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Horas totales: "+($P{horasComPFE}!=null?$P{horasComPFE}:"_____")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="471" width="529" height="15" uuid="0d5d430f-9e65-4f43-b22b-43120223fa0a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$P{lgTipoCiclo}==0]]></printWhenExpression>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Reparto horas por curso: "+($P{horasConcur}!= null?$P{horasConcur}:"_______")]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="22" y="520" width="529" height="15" isRemoveLineWhenBlank="true" uuid="e256d9d2-1799-4ab9-94e0-484d773b7033">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[$P{modulos}!="null"?$P{modulos}:"______________________________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkResponsablesModulos" positionType="Float" isPrintRepeatedValues="false" x="22" y="555" width="13" height="10" isRemoveLineWhenBlank="true" uuid="e93e57bf-c436-4485-bd71-ba7a88c9ce9b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkResponsablesModulos"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="35" y="554" width="516" height="15" uuid="76cecb5e-f052-409a-ac38-257aa29fd626">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Coordinación de los responsables de los módulos profesionales: "]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="571" width="529" height="15" uuid="e967051d-8a22-457c-a16f-8c3dc0462364">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[$P{dsMod}!=null?$P{dsMod}:"______________________________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkComplementario" positionType="Float" isPrintRepeatedValues="false" x="24" y="506" width="13" height="10" isRemoveLineWhenBlank="true" uuid="ad0501b4-989e-4af2-9be4-1b8c2e288ac7">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkComplementario"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="22" y="405" width="118" height="21" uuid="257927d3-7900-4700-aa8c-983c7db42c48">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
+					<paragraph firstLineIndent="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Intervalo de formación: "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareIntervaloDiario" positionType="Float" isPrintRepeatedValues="false" x="169" y="410" width="15" height="12" uuid="cf99e811-4610-4da8-aa97-1d8975399f21">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareIntervaloDiario"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkIntervaloDiario" positionType="Float" isPrintRepeatedValues="false" x="171" y="410" width="13" height="10" uuid="61e0ab78-c8d5-4630-bbc3-e10c5a28823b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkIntervaloDiario"/>
+					<printWhenExpression><![CDATA[$P{lgDiario}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="184" y="405" width="44" height="21" uuid="8d4d0410-0aa6-4451-b18c-9d5441908a42">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["diario"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareIntervaloSemana" positionType="Float" isPrintRepeatedValues="false" x="253" y="410" width="15" height="12" uuid="2438f9f5-933d-418c-af4c-fee6069fd9c9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareIntervaloSemana"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkIntervaloSemana" positionType="Float" isPrintRepeatedValues="false" x="255" y="410" width="13" height="10" uuid="8e1c6e86-13b7-4262-b328-d62e4449439a">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkIntervaloSemana"/>
+					<printWhenExpression><![CDATA[$P{lgSemanal}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="268" y="405" width="54" height="21" uuid="ab347cb9-a4a7-4b20-b44b-6598f19008d2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["semanal"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareIntervaloMensual" positionType="Float" isPrintRepeatedValues="false" x="345" y="410" width="15" height="12" uuid="425f1618-0ce3-40cf-ac27-4091b4a7b191">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareIntervaloMensual"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkIntervaloMensual" positionType="Float" isPrintRepeatedValues="false" x="347" y="410" width="13" height="10" uuid="32db4c46-9936-464e-83ba-805479081a4d">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkIntervaloMensual"/>
+					<printWhenExpression><![CDATA[$P{lgMensual}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="360" y="405" width="54" height="21" uuid="d3a56c51-fadd-4327-8713-5a9b83cbb2c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["mensual"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareIntervaloMensual" positionType="Float" isPrintRepeatedValues="false" x="444" y="410" width="15" height="12" uuid="f9c69f27-89c8-494e-83fb-6d9f7d38825c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareIntervaloMensual"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkIntervaloMensual" positionType="Float" isPrintRepeatedValues="false" x="446" y="410" width="13" height="10" uuid="681bbe99-b868-497a-8841-651b9dc5023e">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkIntervaloMensual"/>
+					<printWhenExpression><![CDATA[$P{lgOtros}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="459" y="405" width="50" height="21" uuid="6f0ebc06-9e06-4e10-9eb5-356d1da7ce71">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA["otros"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="167">
+			<printWhenExpression><![CDATA[$P{lgModalidad}==2]]></printWhenExpression>
+			<textField>
+				<reportElement positionType="Float" x="22" y="2" width="529" height="15" uuid="ff8810b9-4f32-49bd-8600-f25416ec2bcc">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Cuando la modalidad sea intensiva, se deben indicar también: "]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkOrganismoEquiparado" positionType="Float" isPrintRepeatedValues="false" x="21" y="33" width="13" height="10" isRemoveLineWhenBlank="true" uuid="49bdee53-8340-461c-9730-7a0e42d73c64">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkOrganismoEquiparado"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkCaracteristicasAlternancia" positionType="Float" isPrintRepeatedValues="false" x="21" y="77" width="13" height="11" isRemoveLineWhenBlank="true" uuid="2a2ced13-ee6a-460e-a685-1994e2f08271">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkCaracteristicasAlternancia"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="34" y="76" width="516" height="15" uuid="e12cb3ca-aa77-4b7c-9841-e854cb0493e0">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Las características del Contrato en Alternancia"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="21" y="89" width="529" height="15" uuid="5f8a76b7-1170-4740-b8cb-ad18088d71bd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[$P{dsCara}!=null?$P{dsCara}:"______________________________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="checkCondicionesBeca" positionType="Float" isPrintRepeatedValues="false" x="21" y="122" width="13" height="11" isRemoveLineWhenBlank="true" uuid="7cc5a6b5-7483-4af9-be3e-f9d732ee4bfa">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkCondicionesBeca"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="21" y="135" width="529" height="15" uuid="4dd8f6fa-de85-43c5-a986-d0bd5ea07869">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[$P{dsBeca}!=null?$P{dsBeca}:"______________________________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="34" y="121" width="516" height="15" uuid="2a50181c-6c07-4c3d-bc86-dcde352ab784">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Las condiciones de Beca (en su caso)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="34" y="32" width="516" height="14" uuid="b0142311-d5dd-4b98-8d1e-28f5fd7d7b71">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["Las empresas u organismos equiparados colaboradores."]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="21" y="45" width="529" height="15" uuid="85fe3775-ac1e-4b59-b0bb-49172dbd7a88">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA[$P{dsOrg}!=null?$P{dsOrg}:"______________________________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="72">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement key="squareRequiereAutorizacionDelegacionSi" positionType="Float" isPrintRepeatedValues="false" x="28" y="49" width="15" height="12" uuid="52a6c848-b773-4db8-8efb-0c396a0b2d7e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareRequiereAutorizacionDelegacionSi"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkRequiereAutorizacionDelegacionSi" positionType="Float" isPrintRepeatedValues="false" x="30" y="49" width="13" height="10" uuid="1faa27d3-5a65-4d08-bafc-06ddd4111d02">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkRequiereAutorizacionDelegacionSi"/>
+					<printWhenExpression><![CDATA[$P{autorizacion}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="43" y="48" width="22" height="13" uuid="383efa53-6531-4bbb-a911-f81f80dc3df7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["si"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareRequiereAutorizacionDelegacionNo" positionType="Float" isPrintRepeatedValues="false" x="89" y="49" width="15" height="12" uuid="73a9e926-aea6-4c78-8618-0192d0fa77c2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareRequiereAutorizacionDelegacionNo"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checksquareRequiereAutorizacionDelegacionNo" positionType="Float" isPrintRepeatedValues="false" x="91" y="49" width="13" height="10" uuid="c54caf6e-4eb6-4fe9-892c-f99d0911b1cd">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checksquareRequiereAutorizacionDelegacionNo"/>
+					<printWhenExpression><![CDATA[$P{autorizacion}!=1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="104" y="48" width="22" height="13" uuid="fcc9712a-0123-4de7-b5dd-4cfa7aef58d9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["no"]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="8" width="529" height="30" uuid="a2c9068e-c6e5-4444-b2bf-136988c560af">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled"/>
+				<textFieldExpression><![CDATA["B) Observaciones: "+ "<br/>"+ "<br/>" +
+"Requiere autorización por parte de la Delegación Provincial: "]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="169" splitType="Prevent">
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="12" width="529" height="20" uuid="ca1840ab-8e72-4956-bbc2-56ba8ba3c020">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a) Autorización cuando el total de horas de formación Dual entre los dos cursos supera las 400 GB o 580 GM-GS."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionTotalHorasSuperior" positionType="Float" isPrintRepeatedValues="false" x="19" y="13" width="14" height="12" uuid="27c01d8e-1418-4b93-af31-173bdc142482">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionTotalHorasSuperior"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionTotalHorasSuperior" positionType="Float" isPrintRepeatedValues="false" x="21" y="13" width="12" height="10" uuid="5f73fc48-ac72-40e4-a8c8-37d4a25051e9">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionTotalHorasSuperior"/>
+					<printWhenExpression><![CDATA[$P{lgAut400}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="32" width="529" height="43" uuid="2dd8d422-9752-446f-b34e-b6ed4506d30c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["b) Autorización para incorporación de formación complementaria al currículo de las enseñanzas, a desarrollar por parte de la empresa que implique la ampliación de la duración de la oferta formativa, con carácter voluntario para el alumnado y , en su caso, certificable al margen de su titulación."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionInfo" positionType="Float" isPrintRepeatedValues="false" x="19" y="33" width="15" height="12" uuid="3e77dc34-600c-42ba-951c-b9ca22d4942b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionInfo"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionInfo" positionType="Float" isPrintRepeatedValues="false" x="21" y="33" width="12" height="10" uuid="994e8c93-07ed-482e-82a4-ea723ad90776">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionInfo"/>
+					<printWhenExpression><![CDATA[$P{lgAutForCom}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="76" width="529" height="30" uuid="2b753ec5-62ad-475d-9fc5-241ec6d65cd5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["c) Autorización para incorporar un periodo de formación en empresa en cursos de especialización, para aquellos cursos de especialización en los que no sea obligatorio"]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionCursoEspecializacion" positionType="Float" isPrintRepeatedValues="false" x="19" y="77" width="15" height="12" uuid="c2af2974-4e48-4bd3-bae8-1a9d2660b7ca">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionCursoEspecializacion"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionCursoEspecializacion" positionType="Float" isPrintRepeatedValues="false" x="21" y="77" width="12" height="10" uuid="43526184-7a67-47b5-b7b8-ff9f1a20df78">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionCursoEspecializacion"/>
+					<printWhenExpression><![CDATA[$P{lgAutCurEsp}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="107" width="529" height="19" uuid="32740038-9e8c-4268-b41c-f2c404046fe8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["d) Autorizacion para ampliar a tres cursos los ciclos formativos de GB,GM o GS cuya oferta se realice en régimen intensivo."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionInfo" positionType="Float" isPrintRepeatedValues="false" x="19" y="109" width="16" height="12" uuid="11d588f7-6997-4f32-8baf-7652d4c3ec82">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionInfo"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionAmpliacion" positionType="Float" isPrintRepeatedValues="false" x="21" y="109" width="12" height="10" uuid="1195aec8-b43d-4e2f-89a6-aa70a7c72ef2">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionAmpliacion"/>
+					<printWhenExpression><![CDATA[$P{lgAut3Cur}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="127" width="529" height="20" uuid="9a573e29-520b-4e6a-9d13-45cb381f5d01">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["e) Autorización para el cambio de régimen de oferta general a intensiva o viceversa, para un alumno o alumna o grupo."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionCambioRegimen" positionType="Float" isPrintRepeatedValues="false" x="19" y="128" width="15" height="12" uuid="ab734399-4568-499a-8add-b4a0b3adb146">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionCambioRegimen"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionCambioRegimen" positionType="Float" isPrintRepeatedValues="false" x="21" y="128" width="12" height="10" uuid="fcb5becc-d945-4344-869b-bf82f36d01bf">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionCambioRegimen"/>
+					<printWhenExpression><![CDATA[$P{lgAutCamReg}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField textAdjust="StretchHeight">
+				<reportElement positionType="Float" x="19" y="149" width="529" height="20" uuid="2242f999-d43f-435c-add4-77e8631fe162">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<paragraph firstLineIndent="17"/>
+				</textElement>
+				<textFieldExpression><![CDATA["f) Autorización para realizar el periodo de formación en empresa en centros educativos que imparte la propia enseñanza."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement key="squareAutorizacionEnseñanzasLOGSE" positionType="Float" isPrintRepeatedValues="false" x="19" y="150" width="15" height="12" uuid="941345f7-667e-4ac3-9dfb-eb9762b4bfa3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="squareAutorizacionEnseñanzasLOGSE"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement key="checkAutorizacionEnseñanzasLOGSE" positionType="Float" isPrintRepeatedValues="false" x="21" y="150" width="12" height="10" uuid="9a29239c-54cb-416c-aa36-f4fe4108f21f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.element.name" value="checkAutorizacionEnseñanzasLOGSE"/>
+					<printWhenExpression><![CDATA[$P{lgAutProens}==1]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="259" y="0" width="250" height="20" uuid="e73696b5-6daf-4916-9b99-c96eb0e2d280">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página  " + $V{PAGE_NUMBER}  + "  de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="510" y="0" width="40" height="20" uuid="70fa7804-f898-411e-ab28-7eeb7efb0cf7">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

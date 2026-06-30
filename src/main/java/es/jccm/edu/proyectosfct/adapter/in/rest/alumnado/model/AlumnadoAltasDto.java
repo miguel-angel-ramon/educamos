@@ -1,0 +1,45 @@
+package es.jccm.edu.proyectosfct.adapter.in.rest.alumnado.model;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+
+
+
+	@Data
+	@Schema(name = "Alumnado erasmus", description = "Descripcion para el modelo del alumnado altas y bajas")
+	public class AlumnadoAltasDto implements Serializable {
+		
+		private static final long serialVersionUID = 1L;
+
+		@Schema (name = "Fecha de comunicación de datos")
+		private Date fechaComunicacionDatos;
+		
+		@Schema (name = "Dni, Nie o pasaporte")
+		private String dni;
+		
+		@Schema (name = "Número de la Seguridad Social")
+		private String nuss;
+		
+		@Schema (name = "Apellidos")
+		private String apellidos;
+		
+		@Schema (name = "Nombre")
+		private String nombre;
+		
+		@Schema (name = "Fecha de inicio de prácticas")
+		private Date fechaInicioPrac;
+		
+		@Schema (name = "Fecha Prevista de finalización de prácticas")
+		private Date fechaFinPrac;
+		
+		@Schema (name = "Alumnado Erasmus con Beca")
+		private String  alumnErasmusConBeca;
+		
+		@Schema (name = "Alumnado Erasmus sin Beca")
+		private String alumnErasmusSinBeca;	
+		
+		
+}

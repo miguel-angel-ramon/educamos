@@ -1,0 +1,6 @@
+target/
+*.jar
+*.war
+*.ear
+src/main/resources/PruebaEducamosCLM_AdminSDK.json
+.svn/

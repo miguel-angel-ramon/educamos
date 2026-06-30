@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="documentoProrroga" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6576e19a-c4a4-4f01-a262-d918fa2d2ca1">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="municipioP" class="java.lang.String"/>
+	<parameter name="codigoCentroP" class="java.lang.Long"/>
+	<parameter name="provinciaP" class="java.lang.String"/>
+	<parameter name="calleP" class="java.lang.String"/>
+	<parameter name="codigoPostalP" class="java.lang.String"/>
+	<parameter name="cifCentroP" class="java.lang.String"/>
+	<parameter name="telefonoP" class="java.lang.String"/>
+	<parameter name="correoP" class="java.lang.String"/>
+	<parameter name="nombreCentroCompleto" class="java.lang.String"/>
+	<parameter name="diaFechaInicio" class="java.lang.String"/>
+	<parameter name="anoFechaInicio" class="java.lang.String"/>
+	<parameter name="mesFechaInicio" class="java.lang.String"/>
+	<parameter name="diaFechaFinalizacion" class="java.lang.String"/>
+	<parameter name="anoFechaFinalizacion" class="java.lang.String"/>
+	<parameter name="mesFechaFinalizacion" class="java.lang.String"/>
+	<parameter name="fechaInicio" class="java.lang.String"/>
+	<parameter name="fechaVigencia" class="java.lang.String"/>
+	<parameter name="sProrroga" class="java.lang.String"/>
+	<parameter name="descripcionFirma" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="empleado.nombre" class="java.lang.String"/>
+	<field name="empleado.apellido1" class="java.lang.String"/>
+	<field name="empleado.apellido2" class="java.lang.String"/>
+	<field name="empleado.dniEmpleado" class="java.lang.String"/>
+	<field name="numeroConvenio" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.nombre" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido1" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido2" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.numeroDocumento" class="java.lang.String"/>
+	<field name="empresa.nombreEmpresa" class="java.lang.String"/>
+	<field name="id_sede.domicilio" class="java.lang.String"/>
+	<field name="id_sede.codigoPostal" class="java.lang.String"/>
+	<field name="empresa.numIde" class="java.lang.String"/>
+	<field name="id_sede.telefono" class="java.lang.Integer"/>
+	<field name="id_sede.correo" class="java.lang.String"/>
+	<field name="id_sede.localidad.descripcionLarga" class="java.lang.String"/>
+	<field name="id_sede.municipio.provincia.descripcionLarga" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<break>
+				<reportElement x="0" y="794" width="100" height="1" uuid="1a3b9953-4a2d-4702-969b-575e7762ad11"/>
+			</break>
+			<image>
+				<reportElement x="2" y="0" width="550" height="90" uuid="f0cb62cf-354d-40d1-b2f1-57d982823af7"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabecera1Prorroga.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="7" y="99" width="539" height="410" uuid="d08d321c-0a0a-40be-848f-0da34704eb1c"/>
+				<imageExpression><![CDATA["assets/imagesPDF/introduccionPagina1Prorroga.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="10" y="99" width="531" height="190" uuid="ed9c490e-45ee-4ea1-814c-c909288e73c0"/>
+				<imageExpression><![CDATA["assets/imagesPDF/CuerpoPagina1pr.PNG"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="26" y="116" width="165" height="14" uuid="11006383-922b-4058-8e3e-835c9942ff1c"/>
+				<textFieldExpression><![CDATA[$F{numeroConvenio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="15" y="132" width="184" height="18" uuid="1fd1ac7d-f224-4b76-b360-c1b2b9ce70c5"/>
+				<textFieldExpression><![CDATA[$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="14" y="147" width="186" height="13" uuid="82abb63b-b5d0-40a7-a607-2a6110609fad"/>
+				<textFieldExpression><![CDATA[$F{empresa.nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="53" y="317" width="360" height="22" uuid="6690dd8b-2bbd-4257-833b-e91169da0805"/>
+				<textFieldExpression><![CDATA[$F{empleado.nombre}.concat( " " ).concat($F{empleado.apellido1}).concat(" ").concat($F{empleado.apellido2})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="465" y="317" width="76" height="22" uuid="d49a3805-9e81-4cb2-ab08-e1ea0fdef7c1"/>
+				<textFieldExpression><![CDATA[$F{empleado.dniEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="231" y="331" width="150" height="18" uuid="6bedcbab-f1b3-48fb-a944-c694c9ede27d"/>
+				<textFieldExpression><![CDATA[$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="463" y="332" width="66" height="18" uuid="5591d180-7737-4499-958f-62cbe55da045"/>
+				<textFieldExpression><![CDATA[$P{codigoCentroP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="82" y="345" width="248" height="14" uuid="6735f6eb-1219-46f7-904e-5d3f8c237c46"/>
+				<textFieldExpression><![CDATA[$P{municipioP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="345" width="100" height="14" uuid="59bb99a1-7158-404e-b5fc-d2656c00e713"/>
+				<textFieldExpression><![CDATA[$P{provinciaP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="67" y="359" width="192" height="20" uuid="f8670183-e876-40b4-ad69-1ba1e3f910e7"/>
+				<textFieldExpression><![CDATA[$P{calleP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="282" y="359" width="58" height="20" uuid="2418c38f-deb6-4713-b4db-7a13b8c3bf65"/>
+				<textFieldExpression><![CDATA[$P{codigoPostalP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="389" y="359" width="74" height="20" uuid="594c30bc-bcdf-4117-88e0-1201485ecec2"/>
+				<textFieldExpression><![CDATA[$P{cifCentroP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="17" y="373" width="72" height="16" uuid="c28b9cd7-1486-4764-bb33-3f022549e7d6"/>
+				<textFieldExpression><![CDATA[$P{telefonoP}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="56" y="429" width="356" height="20" uuid="af5e210f-e97e-4c6e-a98a-e79c3401e3e9"/>
+				<textFieldExpression><![CDATA[$F{trabajador.datosEmpresaTrabajador.nombre}.concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido1}).concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido2})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="467" y="429" width="74" height="20" uuid="dc71f306-0fc1-488b-85df-7777fe19390f"/>
+				<textFieldExpression><![CDATA[$F{trabajador.datosEmpresaTrabajador.numeroDocumento}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="443" width="188" height="16" uuid="a5e5760c-9331-44e3-befb-2cbaa390feb9"/>
+				<textFieldExpression><![CDATA[$F{empresa.nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="80" y="457" width="202" height="20" uuid="93d706af-6e86-4f25-a972-a4940196c472"/>
+				<textFieldExpression><![CDATA[$F{id_sede.localidad.descripcionLarga}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="343" y="457" width="146" height="20" uuid="ca73e976-91ef-4bc8-870e-a68388144328"/>
+				<textFieldExpression><![CDATA[$F{id_sede.municipio.provincia.descripcionLarga}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="69" y="470" width="260" height="20" uuid="78ffe33c-6ecd-4f32-89c0-e8ae0a8fa437"/>
+				<textFieldExpression><![CDATA[$F{id_sede.domicilio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="354" y="470" width="86" height="20" uuid="c833121d-b482-4f13-ae1a-905b3b21f945"/>
+				<textFieldExpression><![CDATA[$F{id_sede.codigoPostal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="162" y="484" width="100" height="16" uuid="b8c4e487-6c8b-4f76-9d6f-979d4e60a15b"/>
+				<textFieldExpression><![CDATA[$F{id_sede.telefono}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="16" y="484" width="100" height="16" uuid="0494a570-73d0-451e-b4cf-2fd67fec47f6"/>
+				<textFieldExpression><![CDATA[$F{empresa.numIde}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="17" y="520" width="519" height="261" uuid="1806eb0f-c573-44c4-b49f-60d4c202ace0"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cuerpoPagina1Prorroga.PNG"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="21" y="601" width="158" height="18" uuid="bd019ec1-e087-47c1-b9e0-90ac14b50e91"/>
+				<textFieldExpression><![CDATA[$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="196" y="601" width="160" height="24" uuid="69710b76-1672-4c94-8181-3f5bdb4ac479"/>
+				<textFieldExpression><![CDATA[$F{empresa.nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="498" y="736" width="30" height="14" uuid="c2c74c01-cd79-4f88-90fa-7b080aac6b5d"/>
+				<textFieldExpression><![CDATA[$P{diaFechaInicio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="21" y="749" width="68" height="20" uuid="b5f9feaa-a25d-4bf2-9a7f-22c1df57e1f3"/>
+				<textFieldExpression><![CDATA[$P{mesFechaInicio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="105" y="750" width="24" height="18" uuid="2f0b2604-c9fc-48d3-9403-f2cfefe12e9c"/>
+				<textFieldExpression><![CDATA[$P{anoFechaInicio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="386" y="696" width="14" height="14" uuid="9c437045-6c91-4ecc-81bf-51ca8e3f3ad9"/>
+				<textFieldExpression><![CDATA[$P{diaFechaFinalizacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="696" width="52" height="14" uuid="98270650-1e6b-4b40-ad02-5d9ca9d98b91"/>
+				<textFieldExpression><![CDATA[$P{mesFechaFinalizacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="485" y="696" width="34" height="24" uuid="befa348a-541f-4e5f-94aa-dd13875ef361"/>
+				<textFieldExpression><![CDATA[$P{anoFechaFinalizacion}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="166" y="750" width="162" height="18" uuid="2b348b87-e2bd-4ca7-8beb-c6fd52c81c91"/>
+				<textFieldExpression><![CDATA[$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="346" y="750" width="182" height="18" uuid="cb2991bc-3048-4fd6-82b9-749474d710e4"/>
+				<textFieldExpression><![CDATA[$F{empresa.nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="156" y="587" width="100" height="14" uuid="b8d3c6a2-33cb-4568-949c-0160745432f5"/>
+				<textFieldExpression><![CDATA[$P{fechaInicio}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="155" y="642" width="64" height="18" uuid="a825b842-2f3e-4e56-a1a7-435d8ee0cd75"/>
+				<textFieldExpression><![CDATA[$P{fechaVigencia}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="106" y="682" width="157" height="16" uuid="41a1a850-9f30-47f0-9821-c3646f219f2a"/>
+				<textFieldExpression><![CDATA[$P{nombreCentroCompleto}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="289" y="682" width="221" height="16" uuid="6f9bbf78-c05b-4ed9-aa4e-ff306f41400f"/>
+				<textFieldExpression><![CDATA[$F{empresa.nombreEmpresa}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<image>
+				<reportElement x="1" y="9" width="550" height="60" uuid="9757bbe2-fdbc-46a2-84c1-faf69ce9f96e"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabecera2pagina2prorroga.PNG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="21" y="90" width="515" height="80" uuid="e17186dc-a8c7-4020-8da9-4eb258503a28"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sProrroga}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="185" width="521" height="45" uuid="faf92d12-f9a5-4823-86fd-1a591db821cc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Y en prueba de conformidad con sus términos. las partes intervinientes suscriben el presente acuerdo de prórroga, en el lugar y fecha al principio indicados.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="50" y="263" width="450" height="21" uuid="5117f92b-7e13-4a92-9245-315005ab3372"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{descripcionFirma}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="25" y="291" width="167" height="20" uuid="be078ca3-2272-4609-927b-cc74a37a0df8"/>
+				<text><![CDATA[El Director o Directora del Centro Docente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="345" y="289" width="171" height="33" uuid="d9e6136a-5756-41b9-9148-303ea844091b"/>
+				<text><![CDATA[El/La Representante de la Empresa o Entidad]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="51" y="365" width="271" height="40" uuid="a5718d81-87d1-4e89-a063-f4bf30044f77">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{empleado.nombre}.concat( " " ).concat($F{empleado.apellido1}).concat(" ").concat($F{empleado.apellido2})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="371" y="365" width="151" height="40" uuid="b644a610-54ea-4a26-a3e4-44c08737932c"/>
+				<textFieldExpression><![CDATA[$F{trabajador.datosEmpresaTrabajador.nombre}.concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido1}).concat(" ").concat($F{trabajador.datosEmpresaTrabajador.apellido2})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="342" y="365" width="28" height="19" uuid="a79458e9-22ea-4cb9-881e-aa91a932b3fe"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="365" width="27" height="20" uuid="857e1246-9ee2-41c1-99af-0fc8cfc311dd"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="19" y="254" width="517" height="160" uuid="4f37b5a4-ba0d-4f4b-9091-22ba60bf2b6d"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#736C6C"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</detail>
+</jasperReport>

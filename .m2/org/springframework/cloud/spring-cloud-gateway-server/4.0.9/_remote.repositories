@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 12:09:11 CEST 2025
+spring-cloud-gateway-server-4.0.9-sources.jar>central=
+spring-cloud-gateway-server-4.0.9.jar>central=
+spring-cloud-gateway-server-4.0.9.pom>central=

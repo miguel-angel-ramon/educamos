@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Tue Jun 24 14:21:27 CEST 2025
+keycloak-common-15.0.1-sources.jar>central=
+keycloak-common-15.0.1.jar>central=
+keycloak-common-15.0.1.pom>central=

@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Jul 11 13:34:31 CEST 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1752233671201
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1752233667464
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1752233671139
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact org.apache.geronimo.specs\:geronimo-jta_1.0.1B_spec\:jar\:javadoc\:1.0.1 from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1752233671171
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.apache.geronimo.specs\:geronimo-jta_1.0.1B_spec\:jar\:javadoc\:1.0.1 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 409, reason phrase\:  (409)

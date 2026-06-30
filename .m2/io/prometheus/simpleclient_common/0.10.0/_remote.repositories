@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:36:35 CEST 2025
+simpleclient_common-0.10.0-sources.jar>central=
+simpleclient_common-0.10.0.jar>central=
+simpleclient_common-0.10.0.pom>central=

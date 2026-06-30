@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Anexo0" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9795108-9ec1-44c1-a641-736b482a068b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="municipioP" class="java.lang.String"/>
+	<parameter name="codigoCentroP" class="java.lang.Long"/>
+	<parameter name="provinciaP" class="java.lang.String"/>
+	<parameter name="calleP" class="java.lang.String"/>
+	<parameter name="codigoPostalP" class="java.lang.String"/>
+	<parameter name="cifCentroP" class="java.lang.String"/>
+	<parameter name="telefonoP" class="java.lang.String"/>
+	<parameter name="correoP" class="java.lang.String"/>
+	<parameter name="nombreCentroCompleto" class="java.lang.String"/>
+	<parameter name="descripcionFirmaLOFP" class="java.lang.String"/>
+	<parameter name="ssCentro" class="java.lang.String"/>
+	<parameter name="direccionSedeEmpresaP" class="java.lang.String"/>
+	<parameter name="numeroConvenio" class="java.lang.String"/>
+	<parameter name="nombreDirectorP" class="java.lang.String"/>
+	<parameter name="apellido1DirectorP" class="java.lang.String"/>
+	<parameter name="apellido2DirectorP" class="java.lang.String"/>
+	<parameter name="cifDirectorP" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="empleado.nombre" class="java.lang.String"/>
+	<field name="empleado.apellido1" class="java.lang.String"/>
+	<field name="empleado.apellido2" class="java.lang.String"/>
+	<field name="empleado.dniEmpleado" class="java.lang.String"/>
+	<field name="numeroConvenio" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.nombre" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido1" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido2" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.numeroDocumento" class="java.lang.String"/>
+	<field name="empresa.nombreEmpresa" class="java.lang.String"/>
+	<field name="id_sede.domicilio" class="java.lang.String"/>
+	<field name="id_sede.codigoPostal" class="java.lang.String"/>
+	<field name="empresa.numIde" class="java.lang.String"/>
+	<field name="id_sede.telefono" class="java.lang.Long"/>
+	<field name="id_sede.correo" class="java.lang.String"/>
+	<field name="id_sede.localidad.descripcionLarga" class="java.lang.String"/>
+	<field name="id_sede.municipio.provincia.descripcionLarga" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="469" width="530" height="182" uuid="41d2c39b-cbcb-47b7-99fa-60d467420360"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. Suscribir el presente convenio, para el desarrollo de planes de formación correspondientes al Sistema de Formación Profesional de Grados D y E (ciclos formativos y cursos de especialización, respectivamente) del Sistema de Formación Profesional regulado por la Ley Orgánica 3/2022, de 31 de marzo, de ordenación e integración de la Formación Profesional, el RD 659/2023, de 18 de julio, por el que se desarrolla la ordenación del Sistema de Formación Profesional y la Orden 204/2024, de 2 de diciembre, por la que se regulan determinados aspectos sobre la organización y desarrollo del sistema de Formación Profesional de carácter dual en la comunidad autónoma de Castilla-La Mancha, para los centros educativos que impartan ofertas de Formación Profesional de Grados D y E, entre el centro educativo y la empresa u organismo equiparado (en adelante la empresa) que se indican en el presente documento, estableciendo así la colaboración necesaria para posibilitar el desarrollo de periodos de formación en empresa del alumnado en el marco de la regulación normativa indicada anteriormente." +"<br/>"+ "2. Incorporar al presente convenio, a lo largo del período de vigencia, las relaciones nominales de alumnado acogido al mismo, el plan de formación individual, que podrá ser modificado y adaptado en función de las necesidades del desarrollo de este, y los documentos necesarios que faciliten su seguimiento y evaluación." + "<br/>" + "3. Formalizar el presente convenio de acuerdo con las siguientes."]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="801" width="94" height="1" uuid="03f07cf5-3fea-4486-809e-9ca24de9dc80"/>
+			</break>
+			<textField>
+				<reportElement x="23" y="233" width="509" height="170" uuid="006ea321-4525-47ce-88aa-ff525599fa22">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Top" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["De una parte, don./doña. " + ($P{nombreDirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{nombreDirectorP}.replace("&", "&amp;").concat(" ")  + "</u>")+ ($P{apellido1DirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{apellido1DirectorP}.replace("&", "&amp;").concat(" ") + "</u>")+($P{apellido2DirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{apellido2DirectorP}.replace("&", "&amp;").concat(" ") +  "</u>")+" con DNI "+($P{cifDirectorP}!=null?"<u>"+$P{cifDirectorP}.replace("&", "&amp;") +"</u>":"<u>"+"".concat("           ") + "</u>")+" , Director/a (centros públicos del Sistema de Formación Profesional) / representante legal (centros educativos privados), del centro educativo " + ($P{nombreCentroCompleto}!=null?"<u>" +$P{nombreCentroCompleto}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>") +" , con NIF "+($P{cifCentroP}!=null?"<u>"+$P{cifCentroP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("           ") + "</u>") +" y con código asignado en el Registro "+ ($P{codigoCentroP}!=null?"<u>"+$P{codigoCentroP} +"</u>":"<u>"+"".concat("                                                                   ") + "</u>")  +" localizado en "+($P{municipioP}!=null?"<u>"+$P{municipioP}+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+", "+($P{provinciaP}!=null?"<u>" +$P{provinciaP}+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+", dirección "+($P{calleP}!=null?"<u>"+$P{calleP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" código postal "+($P{codigoPostalP} !=null?"<u>"+$P{codigoPostalP}+"</u>":"<u>"+"".concat("           ") + "</u>")+" correo electrónico "+($P{correoP}!=null?"<u>"+$P{correoP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>") +" , telefono "+($P{telefonoP}!=null?"<u>"+$P{telefonoP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("           ") + "</u>") +"<br/>"+"<br/>" +  "Y de otra, don/doña. " +($F{trabajador.datosEmpresaTrabajador.nombre}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+ $F{trabajador.datosEmpresaTrabajador.nombre}.replace("&", "&amp;").concat(" ") +"</u>")+($F{trabajador.datosEmpresaTrabajador.apellido1}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$F{trabajador.datosEmpresaTrabajador.apellido1}.replace("&", "&amp;").concat(" ")+ "</u>") +($F{trabajador.datosEmpresaTrabajador.apellido2}==null?"<u>"+"".concat("           ") + "</u>":"<u>" + $F{trabajador.datosEmpresaTrabajador.apellido2}.replace("&", "&amp;").concat("  ")+"</u>") +" con DNI "+($F{trabajador.datosEmpresaTrabajador.numeroDocumento}!=null?"<u>"+$F{trabajador.datosEmpresaTrabajador.numeroDocumento}+"</u>":"<u>"+"".concat("           ") + "</u>")+", actuando en representación de la empresa u organismo equiparado "+($F{empresa.nombreEmpresa}!=null?"<u>"+$F{empresa.nombreEmpresa}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+", con CIF "+($F{empresa.numIde}!=null?"<u>"+$F{empresa.numIde}+"</u>":"<u>"+"".concat("           ") + "</u>") +" localizado en "+($F{id_sede.localidad.descripcionLarga}!=null?"<u>" +$F{id_sede.localidad.descripcionLarga}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+", "+($F{id_sede.municipio.provincia.descripcionLarga}!=null?"<u>"+$F{id_sede.municipio.provincia.descripcionLarga}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" dirección "+($P{direccionSedeEmpresaP}!=null?"<u>"+ $P{direccionSedeEmpresaP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" código postal "+($F{id_sede.codigoPostal}!=null?"<u>" +$F{id_sede.codigoPostal}+"</u>":"<u>"+"".concat("           ") + "</u>")+", correo electrónico "+($F{id_sede.correo}!=null?"<u>"+$F{id_sede.correo}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                             ") + "</u>")+", teléfono "+($F{id_sede.telefono}!=null?"<u>"+$F{id_sede.telefono}+"</u>":"<u>"+"".concat("           ") + "</u>")]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="20" y="10" width="85" height="60" uuid="f6194b00-4a26-44bf-b395-b497344f5e82"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="20" y="89" width="509" height="50" uuid="0f45fcfd-f040-4425-a34e-c3cbe1d6d0fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Convenio de colaboración entre el centro educativo y la empresa u organismo           equiparado para el desarrollo del período de formación en empresa de los Grados D y E del Sistema de Formación Profesional.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="180" width="507" height="20" uuid="8d0a2b00-f0f5-464c-b389-198aa70b09e4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression><![CDATA[$P{descripcionFirmaLOFP}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="210" width="142" height="21" uuid="59e1ffbf-21ac-4b97-8e4f-350371e489e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[REUNIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="62" width="221" height="31" uuid="a05d14ca-2784-49d5-ac1f-06693d43bdc6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[ANEXO 0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="405" width="141" height="21" uuid="f2a399be-7ff4-4b61-862d-999552eecb6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[EXPONEN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="426" width="503" height="21" uuid="c039c30b-8021-4579-bee5-0bb6a34f67af"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle"/>
+				<text><![CDATA[Las partes reconocen capacidad y legitimidad para convenir, a cuyo efecto.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="447" width="141" height="21" uuid="2107afa9-fad7-4093-854d-b7fcb049066a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ACUERDAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="181" y="655" width="141" height="21" uuid="1573057e-828d-41a7-9fa2-4a663f807869"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[CLÁUSULAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="19" y="692" width="529" height="84" uuid="2da6c24a-99a8-4f42-a35d-abccdbcb996d"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font size="9.8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Es objeto de este convenio establecer el marco de colaboración entre las partes firmantes para el alumnado que figura en el Anexo I (Relación nominal de alumnado) del presente convenio que desarrollará las actividades formativas programadas en el Anexo II (Plan de formación individual), en las dependencias del centro o centros de trabajo de la empresa firmante u organismo equiparado, o, en su caso, en aquellos lugares en los que la empresa u organismo equiparado desarrolle su actividad productiva, sin que ello implique relación laboral alguna con la empresa."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="676" width="530" height="16" uuid="a88ce12b-5de6-4b77-bd4c-72111a8d55f6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Primera. Objeto]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="471" y="779" width="79" height="18" uuid="645bd585-08a4-4564-b37c-4b194171e0b4"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página 1 de 5"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="150" width="230" height="18" uuid="b071788f-14d2-4d58-adac-80583eb55d28">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="3.0" lineStyle="Double"/>
+					<topPen lineWidth="3.0" lineStyle="Double" lineColor="#000000"/>
+					<leftPen lineWidth="3.0" lineStyle="Double" lineColor="#000000"/>
+					<bottomPen lineWidth="3.0" lineStyle="Double" lineColor="#000000"/>
+					<rightPen lineWidth="3.0" lineStyle="Double" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<paragraph firstLineIndent="4" leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CONVENIO N.º " + $F{numeroConvenio}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<image>
+				<reportElement x="20" y="2" width="85" height="60" uuid="087080d9-646b-405f-879a-c360028ecd7e"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="40" y="149" width="510" height="80" uuid="d27e7004-d514-4472-8140-7bf9a51f14a5"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Los datos identificativos."+ "<br/>" +"Los resultados de aprendizaje que se realizarán en las instalaciones y dependencias de la empresa y en el centro educativo." + "<br/>" + "En su caso, otras actividades formativas que, por su especificidad en interés para la formación de la persona, pudieran plantearse en términos de complementos formativos." + "<br/>" + "La distribución horario y jornada del alumnado en la empresa, u organismo equiparado, así como su organización por días a la semana, por semanas, por quincenas por meses u otra distribución."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="252" width="530" height="16" uuid="03f77363-f3df-4456-ae53-427ac65fb3f4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tercera. Tutores y tutoras duales.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="21" y="270" width="530" height="97" uuid="b9ca21cd-18ef-4239-bc66-a1a55d608548"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["La empresa u organismo equiparado designará, para cada persona en formación, como tutor o tutora a un o una profesional que posea la cualificación o experiencia profesional adecuada para ejercer esta función, atendiendo a las prioridades establecidas en el artículo 162.1 del Real Decreto 659/2023, de 18 de julio, por el que se desarrolla la ordenación del Sistema de Formación Profesional." + "<br/>" +"Por su parte, el centro educativo nombrará, para cada persona en formación, un tutor o tutora que realizará las funciones recogidas en el artículo 166.4 del Real Decreto antes indicado, en términos de acompañamiento, orientación y consulta, facilitando las relaciones para mantener la continuidad entre las diferentes fases y actividades del recorrido formativo diseñado."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="400" width="510" height="160" uuid="eda4a789-912f-4f4b-8677-7a32629ea990"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Garantizar el acceso a sus dependencias al tutor o tutora dual del centro de educativo para realizar las visitas y llevar a cabo las actuaciones de revisión de la programación, valoración y supervisión del proceso formativo de la persona en formación." + "<br/>" + "Cumplir la programación de las actividades formativas acordadas con el centro educativo." + "<br/>" + "Supervisar y facilitar el seguimiento individualizado y la valoración del progreso de la persona en formación que debe realizar el tutor o tutora de la empresa u organismo equiparado." + "<br/>" + "Cumplir con todos los requisitos que, en materia de prevención de riesgos laborales, le sean exigibles y proporcionar a la persona en formación, cuando el puesto formativo lo requiera, los equipos de protección correspondientes." + "<br/>" + "Cumplir y hacer cumplir las normas de seguridad e higiene en el trabajo que están vigentes en cada momento." + "<br/>" + "Informar a la representación legal de las personas trabajadoras sobre los acuerdos suscritos, indicando al menos, las personas que se van a incorporar a la empresa, el puesto o puestos en los que desarrollaran la formación y el contenido de la actividad formativa."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="149" width="15" height="80" uuid="03e0cbb6-a5b0-4cdd-b04a-4fa4e91b7f84"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>" + "-"  +"<br/>"  + "<br/>"+"-"  + "<br/>" + "<br/>" + "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="400" width="15" height="160" uuid="1fa4921e-eeee-48ab-b45d-e0b4da82aa6c"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>"+ "<br/>" +  "<br/>"+ "-" +"<br/>"  + "-" +  "<br/>"+ "<br/>" +"-" + "<br/>" +  "<br/>" + "-" + "<br/>" +"-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="384" width="525" height="16" uuid="dec06b3b-6034-45a4-b25f-4267923ee2a5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[La empresa u organismo equiparado se compromete a:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="560" width="531" height="16" uuid="7f0c324f-5ce3-45ba-bdb3-d485d554d291"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Quinta. Compromisos del alumnado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="25" y="605" width="15" height="171" uuid="e3c29dff-cd69-438c-b2a6-b068780e54ea"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>"+ "-" +  "<br/>"+ "<br/>" +"-"  +  "<br/>"+  "<br/>" + "<br/>" +   "-"   + "<br/>" + "-" + "<br/>" +   "-"  + "<br/>" + "<br/>" + "<br/>" +"<br/>" +"<br/>" +  "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="605" width="510" height="171" uuid="627fdbb7-310c-4a57-b73c-ff4ed74db752"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cumplir con el calendario y horario formativo establecido en la empresa u organismo equiparado." + "<br/>" +"Cumplir con las normas establecidas por la empresa u organismo equiparado, especialmente las referidas a la prevención de riesgos laborales." + "<br/>" +"Aplicar y cumplir adecuadamente con las tareas formativas que se le encomienden en la empresa u organismo equiparado, de acuerdo con el plan de formación y la programación establecida, respetando el régimen interno de funcionamiento de la misma." + "<br/>" +"Respetar y cuidar los medios materiales que se pongan a su disposición." + "<br/>" +"Comunicar a la empresa u organismo equiparado con la antelación que sea posible cualquier ausencia." + "<br/>" +"Respetar la máxima confidencialidad y no difusión ni copia para uso profesional ni personal del material técnico de trabajo de la empresa, ya desarrollado o a desarrollar, así como de la información relativa a clientes y personas de contacto de la empresa. Además, no se le permite la reproducción o almacenamiento de datos de la empresa, ni su transmisión, cualquiera que sea el medio utilizado para ello, sin permiso expreso del tutor o tutora de la empresa, tal y como se recoge en el Plan de formación individual, que firmará el alumno. " + "<br/>" +"Otras acordadas con la empresa e incorporadas en el presente convenio."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="576" width="530" height="28" uuid="7948a62e-a166-439a-9cc6-d76d7974b640"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cada persona en formación que desarrolle su actividad en la empresa u organismo equiparado en el marco del presente convenio se compromete a:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="19" y="230" width="531" height="20" uuid="c0919d2c-e816-46c2-a1c6-78053c582277"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El Plan de formación individual estará firmado por la empresa, el centro educativo y la persona en formación."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="368" width="526" height="16" uuid="e30473a0-5e9e-4c2a-a60e-40682b37a749"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cuarta. Compromisos de la empresa u organismo equiparado]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="474" y="782" width="77" height="14" uuid="1c627b6c-e5a6-46a8-a5d1-6565cb96e225"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página 2 de 5"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="84" width="529" height="20" uuid="0b3e90ff-2fc6-40ed-8e44-aca5afa85bde"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Segunda. Plan de formación individual]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="105" width="530" height="43" uuid="de901ff2-4d23-416f-b0da-e1df089c3a03">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top" markup="styled">
+					<font size="9.8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El centro educativo y la empresa se comprometen a acordar el plan de formación individual para la persona en formación, que será desarrollado durante los períodos de tiempo que se especifiquen en cada caso." +"<br/>"+"El plan formativo detallará:"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="19" y="4" width="85" height="60" uuid="0e6db882-52c9-48fa-a372-3a37c33e8772"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="40" y="274" width="510" height="169" uuid="43229e60-e44b-4373-8043-c6cf8386a552"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Facilitar las relaciones permanentes entre el centro educativo y la empresa u organismo equiparado." + "<br/>" +"Determinar, junto con el tutor o tutora dual de la empresa, las plazas formativas a cubrir." + "<br/>" +"Coordinar y concretar el plan de Formación, junto con el tutor o tutora de la empresa y con el resto del equipo docente que imparten docencia, así como el proceso de seguimiento y evaluación." + "<br/>" +"Asistir a la persona en formación durante el o los periodos de formación en empresa, resolviendo cualquier incidencia, garantizando la existencia de apoyos precisos en los casos en que sea necesario para el correcto desarrollo de las actividades de formación, y velando por el aprovechamiento correcto de la persona a formar, mediante visitas periódicas a la o las empresas, entrevistas con la persona en formación y otros medios previstos al efecto." + "<br/>" +"Colaborar con el tutor o tutora dual de la empresa en la valoración de la adquisición de los resultados de aprendizaje previstos, de acuerdo con los criterios de evaluación establecidos, y ajustar, de acuerdo con los criterios del centro, su participación en la sesión de evaluación de la persona en formación." + "<br/>"  + "Otros acordados entre el centro de formación y la empresa u organismo equiparado."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="274" width="15" height="169" uuid="2e49b1f4-4ab8-4920-ab61-8e7e3cedfc18"/>
+				<textElement markup="styled">
+					<font size="9.8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>"+ "-" + "<br/>" + "-"   + "<br/>" +" <br/>" +  "-"   + "<br/>" +" <br/>" +  " <br/>" +  " <br/>"   +  " <br/>"+ "-" +" <br/>" +  " <br/>"  +" <br/>"+ "-"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="254" width="530" height="19" uuid="0728c126-5c60-4a94-a07f-c6174072abaa"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cada tutor o tutora dual del centro educativo, en el marco del presente convenio se compromete a:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="238" width="530" height="16" uuid="50783eec-ff0b-450d-8cb0-c60d3238f6ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Séptima. Compromisos del tutor o tutora del centro educativo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="443" width="528" height="16" uuid="1013c392-b9fd-4b64-8223-9d63bedb8ff5"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Octava. Evaluación del plan de formación individual.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="459" width="529" height="40" uuid="9d22738a-1c3e-43a2-b0db-83d5f77fddb0"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[El desarrollo del plan de formación individual y sus actividades de aprendizaje en la empresa será objeto de evaluación por parte del tutor o tutora del centro de formación, en colaboración con el tutor o tutora de la empresa.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="500" width="530" height="16" uuid="6ccaabf2-c13e-46c4-906a-eea32ee68ef4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Novena. Período de formación en la empresa u organismo equiparado.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="517" width="530" height="73" uuid="d9dd15fa-95f3-4036-918c-09dec5f64f37"/>
+				<textElement textAlignment="Justified">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[El período de formación en la empresa u organismo equiparado de la persona en formación no interferirá con el derecho y obligación de esta a asistir a las actividades lectivas en el centro educativo que previamente se han planificado en el plan acordado.
+Como norma general, la empresa establecerá, junto con el centro educativo, un calendario y una organización horaria para la persona en formación compatible con el calendario correspondiente al centro educativo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="591" width="530" height="16" uuid="bd85ecf6-4d69-473a-bb72-bc7b80742fd7"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Décima. Asignación del alumnado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="608" width="530" height="68" uuid="ec37d822-6214-4fe1-b744-0a85c38c4945"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[El centro de formación, en colaboración con la empresa, asignará los puestos formativos en la misma, de acuerdo con criterios objetivos, públicos y acordes con la actividad de esta, que no supongan discriminación.Contemplarán, al menos, el rendimiento y la asistencia a las actividades lectivas en el centro educativo, así como las competencias personales de cada persona en formación, como su capacidad para el trabajo en equipo, la capacidad para toma de decisiones y la capacidad para la innovación y la creatividad.
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="722" width="528" height="16" uuid="af9967ee-ffdb-40fc-b0fb-b56b47fade19"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Undécima. Compensaciones económicas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="738" width="529" height="48" uuid="7ac9b454-51eb-48b7-8881-6553f2acbe65"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[En caso en que las personas en formación recibieran una compensación económica, se hará constar en un documento anexo las características de las condiciones del contrato de formación (en caso de régimen intensivo) o, en su caso, de la beca o ayuda, detallando la periodicidad de la compensación y el importe.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="466" y="770" width="83" height="18" uuid="48190330-0f75-4a30-acea-634de4df9258"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página 3 de 5"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="20" y="675" width="530" height="29" uuid="88b75819-ce67-4884-926d-615d8d644c70"/>
+				<textElement textAlignment="Justified">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En todo momento la persona en formación irá provista en la empresa del DNI y documento de identificación del centro de formación en que esté inscrito."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="704" width="529" height="18" uuid="f1730ac8-1565-42bf-9035-5c4ce817c66e"/>
+				<textElement textAlignment="Justified">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["La persona en formación, en ningún caso, tendrá vinculación laboral con la empresa."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="67" width="528" height="16" uuid="8afb508c-d927-43bf-a1df-0a2279d9c953"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sexta. Compromisos del equipo docente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="83" width="530" height="36" uuid="8be93569-a3ee-4f32-a5e5-51304e19cc64"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Cada profesor, profesora, personal formador y experto que forme parte del equipo docente responsable de la acción formativa en cuyo marco se desarrolla el periodo de formación en empresa objeto del presente convenio se compromete a:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="37" y="120" width="510" height="114" uuid="c4c5b09c-fe4a-4676-acae-242c07f40e0b"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Participar en el diseño y planificación del plan formativo y en la programación de los módulos profesionales de su competencia que se desarrollen conjuntamente entre centro de formación y la empresa u organismo equiparado."+ "<br/>" + "Asistir a las reuniones de coordinación." + "<br/>" + "Desarrollar los procedimientos y sistemas de evaluación descritos en la programación del Ciclo formativo o Curso de especialización y cumplimentar la documentación pertinente, incorporando la valoración e informe del tutor o tutora de empresa respecto de los resultados de aprendizaje incluidos en cada módulo profesional." + "<br/>" + "Participar en la elaboración de la memoria final del plan formativo, junto con los restantes agentes implicados y bajo la coordinación que establezca la dirección del centro de formación."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="22" y="119" width="15" height="116" uuid="d8e2f332-42a3-4c47-8ac8-a5f4ead7f979">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="9.8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>"+ "<br/>" + "-" + "<br/>" + "-"+ "<br/>" +  "<br/>" + "<br/>"+ "-"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="802">
+			<image>
+				<reportElement x="19" y="6" width="85" height="60" uuid="c4f6cd1e-384c-4bf1-bb95-09b3373b8900"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="23" y="410" width="522" height="16" uuid="9360d96a-c615-4cc6-b783-b1488625c4b6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimocuarta. Seguros]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="527" width="524" height="16" uuid="494ffaba-c515-4e31-b4d5-908e6e3e7ffc"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimoquinta. Alumnado menor de edad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="543" width="526" height="48" uuid="e7280b60-60ee-4c67-91a2-7f9e14a8de7c"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[La empresa garantizará con respecto al personal de esta que esté en contacto habitual con alumnado menor de edad, el no haber sido condenado por sentencia firme por algún delito contra la libertad e indemnidad sexual, que incluye la agresión y abuso sexual, acoso sexual y corrupción de menores, así como por trata de seres humanos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="590" width="526" height="16" uuid="f5f23a77-b013-463e-a4a8-ae89d51b6e08"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimosexta. Vigencia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="606" width="526" height="72" uuid="49a05473-409a-4da0-bdcf-d3bfac994e83"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[En aplicación de lo dispuesto en el artículo 49 h) de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, este convenio tendrá una duración de cuatro años desde su firma.
+En cualquier momento antes de la finalización del plazo previsto, las partes firmantes podrán acordar expresamente y por unanimidad la prórroga del convenio, hasta un máximo de cuatro años adicionales, mediante la correspondiente adenda. La prórroga deberá formalizarse antes del vencimiento del plazo de vigencia correspondiente.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="679" width="526" height="16" uuid="959b8748-c078-43b9-86de-2d349569a667"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimoseptima. Naturaleza del convenio y jurisdicción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="696" width="526" height="89" uuid="503b4207-55de-420f-ae06-b94e62403344"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Este convenio tiene naturaleza administrativa, y se suscribe de conformidad con lo dispuesto en el artículo el artículo 23 de la Orden 204/2024, de 2 de diciembre y en el artículo 47 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, quedando excluido del ámbito de aplicación de la Ley 9/2017, de 8 de noviembre, de Contratos del Sector Público, por la que se transponen al ordenamiento jurídico español las Directivas del Parlamento Europeo y del Consejo 2014/23/UE y 2014/24/UE, de 26 de febrero de 2014, de acuerdo con lo dispuesto en su artículo 6.1, sin perjuicio de que sus principios resulten aplicables para la resolución de las dudas o lagunas que pudieran plantearse en la aplicación del convenio.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="473" y="779" width="75" height="18" uuid="6383ec5a-ecf3-4ea8-ac0d-3c8acf334f94"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página 4 de 5"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="23" y="426" width="522" height="100" uuid="1b25b86b-fab9-4e71-be6d-b4cda05a6d87">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Para cualquier eventualidad de accidente que pudiera producirse durante el desarrollo de la formación en empresa, la acción protectora será la correspondiente al Régimen General de la Seguridad Social, sin perjuicio de las pólizas que la consejería compentente en materia de educación o la empresa puedan suscribir como seguro adicional para mejorar servicios o indemnizaciones.Los colectivos no incluidos en la acción protectora mencionada anteriormente estarán cubiertos por el seguro escolar y la citada póliza de seguros." +"<br/>"+"Adicionalmente, la consejería competente en materia de educación suscribirá un seguro de responsabilidad civil en el entorno profesional para todo el alumnado de Formación Profesional."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="18" y="92" width="528" height="16" uuid="a3db50fa-31cf-416f-91b9-65abd1565d05"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Duodécima. Seguridad Social]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="18" y="112" width="529" height="49" uuid="5f1d036b-0db5-415d-a8e8-a9d6d0692ec9"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[La realización del periodo de formación en empresas mediante los planes formativos vinculados a este convenio determinará la inclusión en el sistema de la Seguridad Social del alumnado que realice la formación indicada, aunque no tengan carácter remunerado. El cumplimiento de las obligaciones en materia de Seguridad Social corresponderá:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="161" width="132" height="20" uuid="459748c8-7048-45ff-9e86-b95ef9fcd134"/>
+				<box topPadding="0" leftPadding="6" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[A la empresa.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="182" width="132" height="20" uuid="d97d8fb1-aff6-4bc9-9bd6-d4a16378bfba"/>
+				<box topPadding="0" leftPadding="6" bottomPadding="0" rightPadding="0"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Al centro de formación.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="202" width="527" height="34" uuid="45a015f0-d9ad-4926-9801-27e01f1775a8"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[La parte que asuma las citadas obligaciones asumirá la gestión del alta en la Seguridad Social de las personas en formación durante su estancia en la empresa, así como el coste no bonificado de la cotización.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="238" width="526" height="16" uuid="92645768-4068-4bca-9cdf-511462f78218"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimotercera. Protección de datos.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="254" width="526" height="86" uuid="9d8f9144-a3c4-4d6e-969a-f0b0c09c4799"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Las partes se comprometen a cumplir con las obligaciones establecidas Reglamento General de Protección de Datos (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, y en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, y en cualesquiera otras normas vigentes o que en el futuro se puedan promulgar sobre esta materia. Las entidades y personas beneficiarias interesadas tendrán los derechos de acceso, rectificación y supresión de datos a que hacen referencia los artículos 12 a 18 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales.]]></text>
+			</staticText>
+			<image>
+				<reportElement x="54" y="161" width="20" height="20" uuid="14e82af3-dbfe-490e-b6d5-024745227f5e"/>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="59" y="161" width="16" height="14" uuid="f030726f-dd56-45ee-a47a-35dc295fe2ca">
+					<printWhenExpression><![CDATA[$P{ssCentro}.equals( "N" )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="59" y="182" width="16" height="14" uuid="c3a89c3e-2d5d-42b3-9510-5514d02f9d9a">
+					<printWhenExpression><![CDATA[$P{ssCentro}.equals( "S" )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="54" y="182" width="20" height="20" uuid="5bacd713-b203-47a6-85ba-da8e4149cbe9"/>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="20" y="340" width="526" height="66" uuid="bed6b51a-8b21-447b-ab3c-3f3ac9a72550">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Los datos de carácter personal facilitados por una de las partes a la otra serán tratados por aquella que los reciba como responsable de los mismos, con la finalidad de gestionar el presente acuerdo y la formación práctica correspondiente, por ser necesarios para la ejecución de ambas finalidades, datos que serán conservados durante el plazo de duración del presente acuerdo y más allá durante los plazos legalmente establecidos.]]></text>
+			</staticText>
+		</band>
+		<band height="802">
+			<textField>
+				<reportElement x="38" y="206" width="510" height="174" uuid="42b5cb0c-fb73-454d-8711-53db29bbb7ad"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["El transcurso del plazo de vigencia del convenio sin haberse acordado la prórroga de este." +  " <br/>"  +  "Acuerdo entre las partes." +  " <br/>"  +  "Fuerza mayor que imposibilite el desarrollo de las actividades programadas." +  " <br/>"  +  "Incumplimiento de las cláusulas establecidas en el convenio, incumplimiento del plan formativo, inadecuación pedagógica de las actividades formativas programadas o vulneración de las normas que, en relación con la realización de las actividades programadas, estén en cada caso vigentes." +  " <br/>"   +  "Igualmente se podrá rescindir para una determinada persona en formación o grupo de personas, por cualquiera de las partes firmantes, y ser excluida o excluidas de su participación por decisión unilateral del centro de formación profesional, de la empresa u organismo equiparado, o conjunta de ambos, en los siguientes supuestos:"+  " <br/>"  + "- Ocupación por parte de la persona en formación de un puesto de trabajo en la organización." +  " <br/>"  +  "- Incumplimiento del plan formativo por parte de la persona en formación."+  " <br/>"  +"- Faltas repetidas de asistencia o puntualidad no justificadas."+  " <br/>"   +"- Actitudes incorrectas."+" <br/>" + "- Falta de aprovechamiento por parte de la persona en formación."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="579" width="211" height="20" uuid="3d426906-4264-40db-90eb-02575168e15a"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[EL/LA DIRECTOR/A DEL CENTRO DOCENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="579" width="262" height="20" uuid="7998587c-a276-467c-8da7-eb54b3968612"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[EL/LA REPRESENTANTE DE LA EMPRESA O ENTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="22" y="650" width="28" height="20" uuid="871585d3-c9c9-4a90-ac96-df2259b29014"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="50" y="650" width="210" height="60" uuid="9d1071f2-c9f5-483b-9037-ca9937b2a9a9">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[($F{empleado.nombre}==null?"".concat("           ") :$F{empleado.nombre}.replace("&", "&amp;").concat(" "))+ ($F{empleado.apellido1}==null?"".concat("           ") :$F{empleado.apellido1}.replace("&", "&amp;").concat(" "))+($F{empleado.apellido2}==null?"".concat("           ") :$F{empleado.apellido2}.replace("&", "&amp;").concat(" "))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="316" y="650" width="232" height="60" uuid="45e599d8-cea6-4be9-b279-6e5b422f1f80"/>
+				<textFieldExpression><![CDATA[($F{trabajador.datosEmpresaTrabajador.nombre}==null? "".concat("           "):$F{trabajador.datosEmpresaTrabajador.nombre}.replace("&", "&amp;").concat(" "))+ ($F{trabajador.datosEmpresaTrabajador.apellido1}==null? "".concat("           ") : $F{trabajador.datosEmpresaTrabajador.apellido1}.replace("&", "&amp;").concat(" ")) +($F{trabajador.datosEmpresaTrabajador.apellido2}==null?"".concat("           ") :$F{trabajador.datosEmpresaTrabajador.apellido2}.replace("&", "&amp;").concat(" "))]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="19" y="10" width="85" height="60" uuid="0c273905-f5c6-467b-9d35-5583152d70b1"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabeceraANE0C.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="22" y="386" width="16" height="39" uuid="8de33c45-6737-4a28-a43b-883a12c3b3af"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["f)"   + "<br/>"+  "g)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="386" width="511" height="39" uuid="ca6c3553-2662-4bac-a111-210cc142a50f"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Por decisión judicial declaratoria de la nulidad del convenio."+" <br/>" + "Por cualquier otra causa legalmente prevista."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="434" width="528" height="44" uuid="947c9aa3-f470-4a0e-8c85-9866ac8a05a4"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En todo caso, deberán finalizarse las actuaciones y actividades que se encuentren en curso. Para ello se fijará un plazo improrrogable acordado por las partes, trascurrido el cual el convenio será objeto de liquidación en los términos previstos en el apartado 2 del artículo 52 de la Ley 40/2015, de 1 de octubre."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="480" width="528" height="16" uuid="0cdee204-e043-4e7b-b4b1-6ea14075cae9"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimonovena. Extinción de convenios o acuerdos anteriores.
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="496" width="528" height="64" uuid="a6592ec7-5cd1-46a2-a551-8fa60db4c648"/>
+				<textElement verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["La firma del convenio extingue los suscritos con anterioridad entre ambas entidades para la misma o similar finalidad que a fecha de firma del presente convenio mantuviesen su vigencia. " + "<br/>"+ "De conformidad con cuanto antecede, en el ejercicio de las facultades que legalmente corresponden a cada uno de los firmantes, obligando con ello a las partes que suscriben el presente convenio en el lugar y fecha señalados al principio."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="288" y="650" width="27" height="20" uuid="9fbfdbaf-cf49-4c3a-8754-624086ff39db"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="22" y="735" width="526" height="44" uuid="24921045-1177-43e0-84e2-3502d0f6389e"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Nota: Cuando alguna de las partes firmantes del convenio tenga la condición de Administración pública, se atendrá a la normativa que, a este respecto, prevé la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, así como la que en el ámbito autonómico le fuera de aplicación."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="471" y="779" width="80" height="18" uuid="3d3795ed-053a-4dc3-b6a5-2257e10798bb"/>
+				<box leftPadding="3"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página 5 de 5"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="22" y="146" width="526" height="18" uuid="330896ef-1ce3-4432-affa-3c22548b2081"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Decimooctava. Causas de extinción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="164" width="526" height="42" uuid="34b620b3-ebba-406a-9108-c48d8f3cda7f"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[De acuerdo con el artículo 51 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, el convenio se extinguirá por el cumplimiento de las actuaciones que constituyen su objeto, o por incurrir en alguna de las siguientes causas de resolución:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="23" y="206" width="15" height="174" uuid="5eb31308-28c2-459e-92a0-ce624324ec08"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a)" + "<br/>"+ "b)" + "<br/>" + "c)"   + "<br/>"+  "d)"   +" <br/>" +  "<br/>" +" <br/>" + "e)"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="87" width="526" height="59" uuid="0d9e6445-c849-4f81-98ea-5cc5d382b89b"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top">
+					<font size="9.5" isBold="false"/>
+				</textElement>
+				<text><![CDATA[En todo caso, las cuestiones litigiosas que pudieran surgir serán de conocimiento y competencia del orden jurisdiccional contencioso-administrativo, de conformidad con lo dispuesto en la Ley 29/1998, de 13 de julio, reguladora de la Jurisdicción Contencioso-administrativa.]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Nov 05 10:13:11 CET 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1758185159939
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1758185179955
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1758185138859
+https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1762333991332
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact org.springframework.boot\:spring-boot-starter-parent\:pom\:2.2.1.RELEASE from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.53, artifactory.jccm.es/172.24.6.63] failed\: connect timed out
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.springframework.boot\:spring-boot-starter-parent\:pom\:2.2.1.RELEASE from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.53, artifactory.jccm.es/172.24.6.63] failed\: connect timed out
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1758184867032

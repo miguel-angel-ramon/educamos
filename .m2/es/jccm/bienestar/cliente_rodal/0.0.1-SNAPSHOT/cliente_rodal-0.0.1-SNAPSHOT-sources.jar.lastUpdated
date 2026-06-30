@@ -1,0 +1,6 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Sep 19 13:06:49 CEST 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1758280009322
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact es.jccm.bienestar\:cliente_rodal\:jar\:sources\:0.0.1-SNAPSHOT from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1758280009397

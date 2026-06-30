@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Thu Dec 04 10:29:42 CET 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1764840562965
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1764840582975
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1764840522783
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1764840542790
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact org.apache.ant\:ant-jsch\:jar\:javadoc\:1.7.0 from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.53, artifactory.jccm.es/172.24.6.63] failed\: Connect timed out
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact org.apache.ant\:ant-jsch\:jar\:javadoc\:1.7.0 from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.63, artifactory.jccm.es/172.24.6.53] failed\: Connect timed out
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.apache.ant\:ant-jsch\:jar\:javadoc\:1.7.0 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.63, artifactory.jccm.es/172.24.6.53] failed\: Connect timed out

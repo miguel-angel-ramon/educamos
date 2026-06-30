@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>rodal2-client</artifactId>
+	<version>1.1.2</version>
+
+	<parent>
+		<groupId>com.jccm.edu</groupId>
+		<artifactId>NexusProject</artifactId>
+		<version>1.3</version>
+	</parent>
+
+	<properties>
+		<!-- propiedades para java 1.4 -->
+		<java.build.version>1.4</java.build.version>
+		<java.source.version>1.4</java.source.version>
+		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+
+		<axis.version>1.4</axis.version>
+		<commons-discovery.version>0.2</commons-discovery.version>
+		<jaxrpc-api.version>1.1</jaxrpc-api.version>
+		<saaj-impl.version>1.3.3</saaj-impl.version>
+		<wsdl4j.version>1.6.2</wsdl4j.version>
+		<log4j.version>1.2.4</log4j.version>
+		<commons-httpclient.version>3.1</commons-httpclient.version>
+		<commons-lang.version>2.6</commons-lang.version>
+	</properties>
+
+	<dependencies>
+
+		<!-- axis -->
+		<dependency>
+			<groupId>axis</groupId>
+			<artifactId>axis</artifactId>
+			<version>${axis.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>custom</groupId>
+			<artifactId>ws-axis-security</artifactId>
+			<version>1.0</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- commons-discovery -->
+		<dependency>
+			<groupId>commons-discovery</groupId>
+			<artifactId>commons-discovery</artifactId>
+			<version>${commons-discovery.version}</version>
+		</dependency>
+		
+		<!-- commons-lang -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>${commons-lang.version}</version>
+		</dependency>
+
+		<!-- jaxrpc-api -->
+		<dependency>
+			<groupId>javax.xml</groupId>
+			<artifactId>jaxrpc-api</artifactId>
+			<version>${jaxrpc-api.version}</version>
+		</dependency>
+
+		<!-- saaj -->
+		<dependency>
+			<groupId>com.sun.xml.messaging.saaj</groupId>
+			<artifactId>saaj-impl</artifactId>
+			<version>${saaj-impl.version}</version>
+		</dependency>
+
+		<!-- wsdl4j -->
+		<dependency>
+			<groupId>wsdl4j</groupId>
+			<artifactId>wsdl4j</artifactId>
+			<version>${wsdl4j.version}</version>
+		</dependency>
+
+		<!-- log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+
+		<!-- commons-httpclient -->
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>${commons-httpclient.version}</version>
+		</dependency>
+
+	</dependencies>
+
+</project>

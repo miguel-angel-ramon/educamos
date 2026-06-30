@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 12:14:16 CEST 2025
+spring-context-6.0.12-sources.jar>central=
+spring-context-6.0.12.jar>central=
+spring-context-6.0.12.pom>central=

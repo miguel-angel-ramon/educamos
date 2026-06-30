@@ -1,0 +1,16 @@
+package es.jccm.edu.evaluacion.adapter.in.rest.aulaVirtual.model;
+import java.io.Serializable;
+import java.util.List;
+
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
+
+@Data
+@Schema(name = "CalificacionActividadDTO", description = "DTO Calificacion Actividad")
+public class CalificacionActividadDTO implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private Long courseid;
+	private List<CriterioActividadAulaVirtualDTO> gradeitems;
+}

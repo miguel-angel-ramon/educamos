@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jccm.edu</groupId>
+    <artifactId>mensajeria-axis</artifactId>
+    <packaging>jar</packaging>
+	
+	<parent>
+	  <groupId>com.jccm.edu</groupId>
+	  <artifactId>NexusProject</artifactId>
+	  <version>1.0</version>	
+	</parent>
+    
+    <version>1.1</version>
+
+    <dependencies>
+		<dependency>
+		  <groupId>custom</groupId>
+		  <artifactId>ws-axis-security</artifactId>
+		  <version>1.0</version>
+		  <type>pom</type>
+		</dependency>		
+				
+    </dependencies>
+
+    <build>
+    
+   		<resources>
+	    	<resource>
+	        	<directory>src/main/resources</directory>
+		        <filtering>true</filtering>
+		        <includes>
+		          <include>*</include>
+		        </includes>	        	
+		        <excludes>
+		        	<exclude>wsdl/**</exclude>
+		        </excludes>
+	        </resource>
+	   	</resources>
+    
+		<plugins>
+		
+		
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>axistools-maven-plugin</artifactId>
+				<version>1.4</version>
+		        <configuration>
+					  <packageSpace>com.jccm.edu.ws.sms</packageSpace> 
+					  <urls>
+						<url>file:///${basedir}/src/main/resources/wsdl/ServicioSMS.wsdl</url> 
+					  </urls>
+					  <debug>true</debug>
+<!-- 					  <outputDirectory>src/main/java</outputDirectory> -->
+					  <timestampDirectory>${project.build.directory}/timestamp</timestampDirectory>				       
+		        </configuration>				
+				<executions>
+				     <execution>
+				       <phase>generate-sources</phase>
+				       <goals>
+				         <goal>wsdl2java</goal>
+				       </goals>
+				     </execution>
+				</executions>				
+			</plugin>		
+
+	    </plugins>    
+		
+    </build>
+    
+    <properties>
+    	<java.source.version>1.6</java.source.version>
+    </properties>    
+  
+</project>

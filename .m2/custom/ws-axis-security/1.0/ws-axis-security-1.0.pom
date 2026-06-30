@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>custom</groupId>
+    <artifactId>ws-axis-security</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0</version>
+	
+	<parent>
+	  <groupId>com.jccm.edu</groupId>
+	  <artifactId>NexusProject</artifactId>
+	  <version>1.0</version>	
+	</parent>
+
+
+    <dependencies>
+		<!-- Ya incluye axis-jaxrpc, axis-saaj y axis-wsdl4j -->
+		<dependency>
+		    <groupId>axis</groupId>
+		    <artifactId>axis</artifactId>
+		    <version>1.4</version>
+		</dependency>
+
+		<dependency>
+			<groupId>custom</groupId>
+			<artifactId>xmlparser-apache</artifactId>
+			<version>1.0</version>
+			<type>pom</type>
+		</dependency>		
+		
+
+		<dependency>
+		  <groupId>wss4j</groupId>
+		  <artifactId>wss4j</artifactId>
+		  <version>1.5.0</version>
+		</dependency>
+
+		<!-- Dependencias de WSS4J -->
+		
+		<dependency>
+		  <groupId>org.apache.santuario</groupId>
+		  <artifactId>xmlsec</artifactId>
+		  <version>1.4.4</version>
+		</dependency>	
+
+		<dependency>
+		    <groupId>org.bouncycastle</groupId>
+		    <artifactId>bcprov-jdk15</artifactId>
+		    <version>1.45</version>
+		</dependency>
+
+		<dependency>
+		  <groupId>commons-httpclient</groupId>
+		  <artifactId>commons-httpclient</artifactId>
+		  <version>3.0</version>
+		  <exclusions>
+			<exclusion>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>				
+			</exclusion>
+		  </exclusions>
+		</dependency>		
+		
+		<dependency> 
+		  <groupId>commons-logging</groupId> 
+		  <artifactId>commons-logging</artifactId> 
+		  <version>1.1.1</version> 
+		</dependency>
+		
+		<dependency>
+		  <groupId>commons-discovery</groupId>
+		  <artifactId>commons-discovery</artifactId>
+		  <version>0.4</version>
+		</dependency>		
+		
+		<dependency>
+		  <groupId>commons-codec</groupId>
+		  <artifactId>commons-codec</artifactId>
+		  <version>1.3</version>
+		</dependency>	
+
+		<dependency>
+		  <groupId>log4j</groupId>
+		  <artifactId>log4j</artifactId>
+		  <version>1.2.9</version>
+		</dependency>		
+
+		<dependency>
+		  <groupId>org.opensaml</groupId>
+		  <artifactId>opensaml</artifactId>
+		  <version>1.1</version>
+		</dependency>		
+		
+    </dependencies>
+  
+</project>

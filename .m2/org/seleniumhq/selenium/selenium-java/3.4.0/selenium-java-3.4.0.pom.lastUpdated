@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Jul 16 09:56:14 CEST 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1752651326901
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1752651346911
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1752651306825
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-java\:pom\:3.4.0 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.53, artifactory.jccm.es/172.24.6.63] failed\: Connect timed out
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact org.seleniumhq.selenium\:selenium-java\:pom\:3.4.0 from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: Connect to artifactory.jccm.es\:443 [artifactory.jccm.es/172.24.6.53, artifactory.jccm.es/172.24.6.63] failed\: Connect timed out
+https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1752652574376

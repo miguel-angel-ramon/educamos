@@ -1,0 +1,240 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.jccm.edu</groupId>
+  <artifactId>NexusProject</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <name>NexusProject</name>
+
+	<distributionManagement>
+        <repository>
+            <id>areaCentrosEducativos-release</id>
+            <name>areaCentrosEducativos-release</name>
+            <url>https://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/</url>
+        </repository>
+        <snapshotRepository>
+            <id>areaCentrosEducativos-snapshot</id>
+            <name>areaCentrosEducativos-snapshot</name>
+            <url>https://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/</url>       
+        </snapshotRepository>   
+	</distributionManagement>
+  
+  	<build>
+		<plugins>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-resources-plugin</artifactId>
+			  <version>2.4.3</version>
+			  <configuration>
+			    <encoding>ISO-8859-1</encoding>
+			    <escapeString>\</escapeString>
+			    <useDefaultDelimiters>false</useDefaultDelimiters>
+			    <delimiters>
+				  <delimiter>${*}</delimiter>
+				</delimiters>
+			  </configuration>
+			</plugin>		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>				
+				<configuration>
+					<source>${java.source.version}</source>
+					<target>${java.source.version}</target>
+				</configuration>
+			</plugin>
+	        <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-scm-plugin</artifactId>
+		        <version>1.4</version>
+		        <configuration>
+		          <connectionType>developerConnection</connectionType>
+		        </configuration>
+	        </plugin>
+		    <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-release-plugin</artifactId>
+		        <version>2.1</version>
+				<configuration>
+		          <tagBase>
+		            ${scm.tagBase}
+		          </tagBase>
+		          <branchBase>
+		            ${scm.branchBase}
+		          </branchBase>
+		        </configuration>		        
+		    </plugin>
+		    
+		    
+			 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
+				<version>3.0-beta-2</version>
+				<configuration>
+				<reportPlugins>
+				
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-checkstyle-plugin</artifactId>
+						<version>2.4</version>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-pmd-plugin</artifactId>
+						<version>2.5</version>
+						<configuration>
+							<!-- PMD options -->
+							<targetJdk>${java.source.version}</targetJdk>
+							<aggregate>true</aggregate>
+							<format>xml</format>
+							<!-- CPD options -->
+							<minimumTokens>20</minimumTokens>
+							<ignoreIdentifiers>true</ignoreIdentifiers>
+						</configuration>
+					</plugin>	
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>findbugs-maven-plugin</artifactId>
+						<version>2.0.1</version>
+						<configuration>
+							<effort>Max</effort>
+							<xmlOutput>true</xmlOutput>
+						</configuration>
+					</plugin>													
+				</reportPlugins>
+				</configuration>
+			</plugin>
+
+			<plugin>
+			   <groupId>org.codehaus.mojo</groupId>
+			   <artifactId>jalopy-maven-plugin</artifactId>
+			   <version>1.0-alpha-1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>2.0-beta-2</version>
+			</plugin>			  			
+		    
+		    	        			
+		</plugins>
+	</build>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+    <scm.prefix>scm:svn:</scm.prefix>
+    <scm.base.url>http://edudesa.cedu.jclm.es/svn</scm.base.url>
+    <scm.prefixed.base.url>${scm.prefix}${scm.base.url}</scm.prefixed.base.url>
+
+    <scm.tagBase>${scm.base.url}/${scm.custom.svn.repo}/tags</scm.tagBase>
+    <scm.branchBase>${scm.base.url}/${scm.custom.svn.repo}/branches</scm.branchBase>
+
+    <scm.prefixed.tagBase>${scm.prefix}${scm.tagBase}</scm.prefixed.tagBase>
+    <scm.prefixed.branchBase>${scm.prefix}${scm.branchBase}</scm.prefixed.branchBase>
+  </properties>
+
+  <dependencyManagement>
+	  <dependencies>
+			<!-- Librerias del servidor -->
+			<dependency>
+			  <groupId>javax.servlet</groupId>
+			  <artifactId>servlet-api</artifactId>
+			  <version>2.5</version>
+			  <scope>provided</scope>
+			</dependency>	
+			<dependency>
+			  <groupId>javax.servlet</groupId>
+			  <artifactId>jsp-api</artifactId>
+			  <version>2.0</version>
+			  <scope>provided</scope>
+			</dependency>	
+			<dependency>
+			  <groupId>oracle.jdbc</groupId>
+			  <artifactId>ojdbc6</artifactId>
+			  <version>1.0</version>
+			  <scope>provided</scope>  
+			</dependency>
+			<dependency>
+			    <groupId>javax.mail</groupId>
+			    <artifactId>mail</artifactId>
+			    <version>1.4.1</version>
+			    <scope>provided</scope>
+			</dependency>
+			<dependency>
+			  <groupId>javax.activation</groupId>
+			  <artifactId>activation</artifactId>
+			  <version>1.1.1</version>
+			  <scope>provided</scope>
+			</dependency>
+	  </dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+			<dependency>
+			  <groupId>javax.servlet</groupId>
+			  <artifactId>servlet-api</artifactId>
+			</dependency>	
+			<dependency>
+			  <groupId>javax.servlet</groupId>
+			  <artifactId>jsp-api</artifactId>
+			</dependency>	
+			<dependency>
+			  <groupId>oracle.jdbc</groupId>
+			  <artifactId>ojdbc6</artifactId>
+			</dependency>
+			<dependency>
+			    <groupId>javax.mail</groupId>
+			    <artifactId>mail</artifactId>
+			</dependency>
+			<dependency>
+			  <groupId>javax.activation</groupId>
+			  <artifactId>activation</artifactId>
+			</dependency> 
+  </dependencies>
+  
+  <profiles>
+  	<profile>
+  		<id>libreria</id>
+  		<properties>
+			<!-- Aqui no se define la variable entorno pues no debe llevar classifier el entregable -->
+  		</properties>
+  	</profile>  
+  	<profile>
+  		<id>local</id>
+  		<properties>
+  			<entorno>local</entorno>
+  		</properties>
+	    <activation>
+	      <activeByDefault>true</activeByDefault>
+	    </activation>
+  	</profile>
+  	<profile>
+  		<id>desarrollo</id>
+  		<properties>
+  			<entorno>desarrollo</entorno>
+  		</properties>
+  	</profile>  
+  	<profile>
+  		<id>preproduccion</id>
+  		<properties>
+  			<entorno>preproduccion</entorno>
+  		</properties>
+  	</profile>  		
+  	<profile>
+  		<id>produccion</id>
+  		<properties>
+  			<entorno>produccion</entorno>
+  		</properties>
+  	</profile>  	
+  	<profile>
+  		<id>formacion</id>
+  		<properties>
+  			<entorno>formacion</entorno>
+  		</properties>
+  	</profile>  	
+  </profiles>
+  
+</project>

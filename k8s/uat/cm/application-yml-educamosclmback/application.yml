@@ -1,0 +1,146 @@
+server:
+  ssl: 
+    enabled: false 
+  port: 8080
+spring:
+  datasource:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=orabeta.ijclm.es)(PORT=1561))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=steducamosclmback)))
+    username: delphos
+    password: delphosPre0915
+    driverClassName: oracle.jdbc.OracleDriver
+    hikari:
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-timeout: 30000
+      maximum-pool-size: 5
+      max-lifetime: 600000
+      minimum-idle: 2
+      validation-timeout: 3000
+      idle-timeout: 300000
+  datasourcesegedu:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=orabeta.ijclm.es)(PORT=1561))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=STPAPASDELPHOS)))
+    username: delphos_segedu
+    password: N3CwEw2K0IItMe8
+    driverClassName: oracle.jdbc.OracleDriver
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        format_sql: false
+    show-sql: false
+  data:
+    rest:
+      base-path: '/apieducamosclm'
+  security:
+    oauth2:
+      resource:
+        jwt:
+          key-value: 3e4d3d14a2a49a2a276be0c1d2c5beb0
+      resourceserver:
+        jwt:
+          issuer-uri: https://educamosclmauthcas-uat.cm-pre.jccm.es/oauth/realms/realm          
+          jwk-set-uri: https://educamosclmauthcas-uat.cm-pre.jccm.es/oauth/realms/realm/protocol/openid-connect/certs
+          jws-algorithm: ES256
+  servlet:
+   multipart:
+    max-file-size: 50MB 
+    max-request-size: 100MB
+  mail:
+    host: smtp.jclm.es
+    username: ddpp04
+    password: S1^1Cm
+    #port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+educamos.mail.sender: educamosclm@jccm.es
+
+ldap-client:
+  ldapClientBeanConfig:
+    entorno: preproduccion
+    user: uugd01
+    password: geseduca    
+      
+rodal:
+  fct:
+    configSeguridadWs:
+      usuario: U_EDUC_MFCT
+      password: 1234567890
+      timeout: 30000
+      securizacion: WSSE
+      urlBase: http://rodal2-pre.jccm.es
+      urlEndpoint: /alfresco/wsService
+    rodalConfig:
+      mtomEnabled: true
+      sistema: MFCT
+      unidadFuncional: EDUC
+      expediente: INCL
+  docgc:
+    configSeguridadWsDGC:
+      usuario: U_EDUC_MDGC
+      password: 1234567890
+      timeout: 30000
+      securizacion: WSSE
+      urlBase: http://rodal2-pre.jccm.es
+      urlEndpoint: /alfresco/wsService
+    rodalConfigDGC:
+      mtomEnabled: true
+      sistema: MDGC
+      unidadFuncional: EDUC
+      expediente: INCL
+comunica:
+  api:
+    path: https://papassegedu-pre.jccm.es/segedu/api/
+    token-header: X-API-KEY
+    token-value: idofn3-SADFo3#G
+accesopapas:
+  api:
+    path: https://papas-pre.jccm.es/accesopapas/api
+    token-header: X-API-KEY
+    token-value: c3175e2bf25aff45d17e9cad976abeb3
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+async:
+  configuration:
+    corePoolSize: 10
+    maxPoolSize: 100
+    queueCapacity: 500
+enable:
+  simulation: true
+reports:
+    delphos:
+      urlBase: http://oasfr-pre.jccm.es/reports/rwservlet
+      cadenaConexion: delphosreport_preprod_11g
+cesar:
+  url: https://cesar-wd-pre.jccm.es:443/XISOAPAdapter/MessageServlet?channel=:WS_CS_AFIRMA:CC_CS_VALIDAR&version=3.0&Sender.Service=WS_CS_AFIRMA&Interface=http://jccm.es/targetNamespace/@Firma^MI_VALIDAR_REQ
+  token: Basic WlBJX1dTX0VEVUNBOjUxZWR1Y2E1MQ==
+  urlactualizada: https://cesar-wd-pre.jccm.es:444/XISOAPAdapter/MessageServlet?senderParty=&senderService=Z_BS_SIFIRMA_T&receiverParty=&receiverService=&interface=SI_AFIRMA_ValidarFirma_OB&interfaceNamespace=http://jccm.es/po/afirma/ValidarFirma
+  usuario: ZPO_WS_EDU
+  password: JC_CALEDU1$.
+segsocial:
+  biloop: 
+    url: https://educamosclm.biloop.es/
+    username: 03856317E
+    password: kvQYu71aH5
+    apiToken: 8245f588-23a5-41e9-8477-0a84cd2f0961

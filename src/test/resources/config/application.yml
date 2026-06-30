@@ -1,0 +1,83 @@
+spring:
+  datasource:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=oradesa.ijclm.es)(PORT=1525))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=SDPAPASDELPHOS)))
+    username: delphos
+    password: delphosdes14
+    driverClassName: oracle.jdbc.OracleDriver
+  datasourcesegedu:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=oradesa.ijclm.es)(PORT=1525))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=SDPAPASDELPHOS)))
+    username: delphos_segedu
+    password: delphos_segedu
+    driverClassName: oracle.jdbc.OracleDriver
+  data:
+    rest:
+      base-path: '/apieducamosclm'
+  security:
+    oauth2:
+     client:
+       registration:
+         default:
+           client-id: edu-educamos-api
+           client-secret: 8bbc984b-9a3b-4621-9d6c-876d5d06c7a1
+     resourceserver:
+      jwt:
+        name: cerbero
+        issuer-uri: https://sso-cerbero-pre.cm-pre.jccm.es/auth/realms/educacion
+        principal-claim-name: preferred_username
+        role-mappings: 
+          - authorities.authorities
+        acl-mappings: domain_access
+    http:
+      cors:
+        mappings:
+          '[/**]':
+            allowed-origins: '*'  
+            allowed-methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH
+      authorize-requests:
+        permit:
+         '[/apieducamosclm/**]':
+           - OPTIONS
+         '[/publico/**]':
+           - ALL
+         '[/marcaje/**]':
+           - ALL
+        authenticated:
+          '[/apieducamosclm/**]':
+            - ALL 
+
+
+educamos.mail.sender: educamosclm@jccm.es
+
+educamosclm:
+  featureinyectasesionoracle: true
+interfazleemos:
+  educenrestEnpoint: https://educen-pre.jccm.es/educen/rest/v1
+  ilekey: 6223c96ea1d4d38450ad
+  feature-usuariost-normalizada: true
+totp:
+  google-issuer: EDUCAMOS_CLM_DESA  
+logging:
+  level:
+    root: INFO
+    es.jccm.edu: DEBUG
+    org.springframework.jdbc.core: TRACE
+
+#####################################
+#     MULTITENANCY JWT EDUCAMOS     #
+#####################################
+educamos:
+  security:
+    oauth2:
+      resource:
+        jwt:
+          key-value: 3e4d3d14a2a49a2a276be0c1d2c5beb0
+          issuer-uri: https://educamosclmauthcas-des.cm-pre.jccm.es/oauth/realms/realm
+cerbero.purgar.cache: https://sso-cerbero-pre.cm-pre.jccm.es/auth/realms/educacion/usercache/purge/  

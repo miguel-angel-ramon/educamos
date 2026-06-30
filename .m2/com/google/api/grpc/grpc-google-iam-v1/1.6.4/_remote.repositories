@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Sep 19 13:07:44 CEST 2025
+grpc-google-iam-v1-1.6.4-sources.jar>central=
+grpc-google-iam-v1-1.6.4.jar>central=
+grpc-google-iam-v1-1.6.4.pom>central=

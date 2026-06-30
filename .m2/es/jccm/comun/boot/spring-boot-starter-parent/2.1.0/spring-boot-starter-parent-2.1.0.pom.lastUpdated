@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:26:43 CEST 2025
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1749893136033
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1749893136112
+24ccbfe64de64f97829c9e991f6576afa245d779@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749893135857
+24ccbfe64de64f97829c9e991f6576afa245d779@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749893135980
+https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749893203093
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact es.jccm.comun.boot\:spring-boot-starter-parent\:pom\:2.1.0 from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact es.jccm.comun.boot\:spring-boot-starter-parent\:pom\:2.1.0 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 401, reason phrase\:  (401)

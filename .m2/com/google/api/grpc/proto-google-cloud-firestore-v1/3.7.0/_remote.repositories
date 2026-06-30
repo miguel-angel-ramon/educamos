@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Sep 19 13:07:46 CEST 2025
+proto-google-cloud-firestore-v1-3.7.0-sources.jar>central=
+proto-google-cloud-firestore-v1-3.7.0.jar>central=
+proto-google-cloud-firestore-v1-3.7.0.pom>central=

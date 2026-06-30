@@ -1,0 +1,260 @@
+server:
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: password
+    key-store-type: pkcs12
+    key-alias: tomcat
+    enabled: true
+  port: 8080
+  max-http-header-size: 16KB
+spring:
+  mvc:
+    async:
+      request-timeout: 60000
+  datasource:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=oradesa.ijclm.es)(PORT=1525))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=SDPAPASDELPHOS)))
+    username: delphos
+    password: delphosdes14
+    driverClassName: oracle.jdbc.OracleDriver
+  datasourcesegedu:
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate:
+        ddl-auto: none
+    jdbc-url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=oradesa.ijclm.es)(PORT=1525))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=SDPAPASDELPHOS)))
+    username: delphos_segedu
+    password: delphos_segedu
+    driverClassName: oracle.jdbc.OracleDriver
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      org:
+        hibernate:
+          envers:
+            audit_table_suffix: _AUDIT
+            revision_field_name: REVISION_ID
+            revision_type_field_name: REVISION_TYPE    
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle12cDialect
+        format_sql: true
+    show-sql: false
+  data:
+    rest:
+      base-path: '/apieducamosclm'
+  security:
+    oauth2:
+      client:
+        registration:
+          default:
+            client-id: edu-educamos-api
+            client-secret: 0d27d6d6-2f97-4116-aec2-c9cf14c0c03a
+      resourceserver:
+        jwt:
+          name: cerbero
+          issuer-uri: https://sso-cerbero-des.cm-pre.jccm.es/auth/realms/educacion
+          principal-claim-name: nif
+          role-mappings: 
+            - authorities.authorities
+          acl-mappings: domain_access
+    http:
+      cors:
+        mappings:
+          '[/**]':
+            allowed-origins: '*'  
+            allowed-methods: GET, HEAD, POST, PUT, DELETE, TRACE, OPTIONS, PATCH
+      authorize-requests:
+        permit:
+         '[/apieducamosclm/**]':
+           - OPTIONS
+         '[/publico/**]':
+           - ALL
+         '[/lopd/publico/**]':
+           - ALL
+         '[/lopd/privado/**]':
+           - OPTIONS           
+        authenticated:
+          '[/apieducamosclm/**]':
+            - ALL
+          '[/lopd/privado/**]':
+            - ALL            
+  servlet:
+    multipart:
+      max-file-size: 50MB 
+      max-request-size: 100MB
+  ldap:
+    base: o=Junta de Castilla-La Mancha,c=ES
+    username: uid=gestus-educlm,o=Junta de Castilla-La Mancha,c=ES
+    password: isdfK#Ee4
+    urls: ldap://ldap.jccm.es     
+  mail:
+    host: smtp.jclm.es
+    username: ddpp04
+    password: S1^1Cm
+    #port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+################################################
+#                 QUARTZ SCHEDULER
+################################################
+  batch:
+    job:
+      enabled: false
+  quartz:
+    auto-startup: true
+    job-store-type: jdbc
+    properties:
+      org.quartz.scheduler.instanceName: EducamosCLMScheduler
+      
+educamos.mail.sender: educamosclm@jccm.es
+
+   
+ldap-client:
+  ldapClientBeanConfig:
+    entorno: preproduccion
+    user: uugd01
+    password: geseduca
+        
+rodal:
+  fct:
+    configSeguridadWs:
+      usuario: U_EDUC_MFCT
+      password: 1234567890
+      timeout: 30000
+      securizacion: WSSE
+      urlBase: http://rodal2-pre.jccm.es
+      urlEndpoint: /alfresco/wsService
+    rodalConfig:
+      mtomEnabled: true
+      sistema: MFCT
+      unidadFuncional: EDUC
+      expediente: INCL
+  docgc:
+    configSeguridadWsDGC:
+      usuario: U_EDUC_MDGC
+      password: 1234567890
+      timeout: 30000
+      securizacion: WSSE
+      urlBase: http://rodal2-pre.jccm.es
+      urlEndpoint: /alfresco/wsService
+    rodalConfigDGC:
+      mtomEnabled: true
+      sistema: MDGC
+      unidadFuncional: EDUC
+      expediente: INCL
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    groups-order: DESC
+    operationsSorter: method
+    disable-swagger-default-url: true
+    oauth:
+      realm: educacion
+      client-id: edu-educamos-api
+      client-secret: 0d27d6d6-2f97-4116-aec2-c9cf14c0c03a
+  packages-to-scan:
+    es.jccm.edu.alumnos.adapter.in.rest,
+    es.jccm.edu.aulasVirtuales.adapter.in.rest,
+    es.jccm.edu.ausencias.adapter.in.rest,
+    es.jccm.edu.comunicaciones.adapter.in.rest,
+    es.jccm.edu.documentosGC.adapter.in.rest,
+    es.jccm.edu.horarios.adapter.in.rest,
+    es.jccm.edu.proyectosfct.adapter.in.rest,
+    es.jccm.edu.shared.adapter.in.rest,
+    es.jccm.edu.simulacion.adapter.in.rest,
+    es.jccm.edu.trazaerrores.adapter.in.rest,
+    es.jccm.edu.lopd.adapter.in.rest,
+    es.jccm.edu.envsms.adapter.in.rest,
+    es.jccm.edu.gestionidentidades.adapter.in.rest,
+    es.jccm.edu.gestionauditorias.adapter.in.rest,          
+    es.jccm.edu.buzon.adapter.in.rest,         
+comunica:
+  api:
+    path: https://papassegedu-desa.jccm.es/segedu/api/
+    token-header: X-API-KEY
+    token-value: foo
+accesopapas:
+  api:
+    path: https://papas-desa.jccm.es/accesopapas/api
+    token-header: X-API-KEY
+    token-value: c3175e2bf25aff45d17e9cad976abeb3
+front:
+  base-path: 'https://educamosclmag-des.cm-pre.jccm.es/'
+entorno: 'desa'
+async:
+  configuration:
+    corePoolSize: 10
+    maxPoolSize: 100
+    queueCapacity: 500
+enable:
+  simulation: true
+reports:
+    delphos:
+      urlBase: http://oasfr-pre.jccm.es/reports/rwservlet
+      cadenaConexion: delphosreport_desarrollo
+politicaGeneracionLogin:
+  longitudMinima: 8
+  longitudMaxima: 18
+politicaGeneracionClave:
+  longitudMinima: 8
+  longitudMaxima: 18
+duracionEmail : 5
+    
+numIntentos:
+  numMaxIntentos: 5
+totp:
+  google-issuer: EDUCAMOS_CLM_DESA
+educamosclm:
+  featureinyectasesionoracle: true
+interfazleemos:
+  educenrestEnpoint: https://educen-pre.jccm.es/educen/rest/v1
+  ilekey: 6223c96ea1d4d38450ad
+  feature-usuariost-normalizada: true
+gcp:
+  firebase:
+    service-account: classpath:PruebaEducamosCLM_AdminSDK.json
+sms:
+  entorno:
+    username: smseduc
+    password: 64fhs&gy
+    url: https://sms2022-pre.jccm.es/limsp-ws-mt-connector/services/ws_adaptorPort
+cesar:
+  url: https://cesar-wd-pre.jccm.es:443/XISOAPAdapter/MessageServlet?channel=:WS_CS_AFIRMA:CC_CS_VALIDAR&version=3.0&Sender.Service=WS_CS_AFIRMA&Interface=http://jccm.es/targetNamespace/@Firma^MI_VALIDAR_REQ
+  token: Basic WlBJX1dTX0VEVUNBOjUxZWR1Y2E1MQ==
+  urlactualizada: https://cesar-wd-pre.jccm.es:444/XISOAPAdapter/MessageServlet?senderParty=&senderService=Z_BS_SIFIRMA_T&receiverParty=&receiverService=&interface=SI_AFIRMA_ValidarFirma_OB&interfaceNamespace=http://jccm.es/po/afirma/ValidarFirma
+  usuario: ZPO_WS_EDU
+  password: JC_CALEDU1$.
+#####################################
+#     MULTITENANCY JWT EDUCAMOS     #
+#####################################
+educamos:
+  security:
+    oauth2:
+      resource:
+        jwt:
+          key-value: a96ce4e7ba1aba2a1d1ec6a823a857a4
+          issuer-uri: https://educamosclmauthcas-des.cm-pre.jccm.es/oauth/realms/realm
+cerbero.purgar.cache: https://sso-cerbero-des.cm-pre.jccm.es/auth/realms/educacion/usercache/purge/
+educamos.security.principal.claim: oid_username 
+segsocial:
+  biloop: 
+    url: https://educamosclm.biloop.es/
+    username: 03856317E
+    password: kvQYu71aH5
+    apiToken: 096be393-7b64-4ebe-92a8-518854fb33d1
+educamos.security.identity.claim: nif
+freshservice:
+  url: https://cauedujccm.freshservice.com/api/v2/tickets
+  apiKey: s2FjViAPQsM2vN_ikqML

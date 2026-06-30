@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Anexo0" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9795108-9ec1-44c1-a641-736b482a068b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="municipioP" class="java.lang.String"/>
+	<parameter name="codigoCentroP" class="java.lang.Long"/>
+	<parameter name="provinciaP" class="java.lang.String"/>
+	<parameter name="calleP" class="java.lang.String"/>
+	<parameter name="codigoPostalP" class="java.lang.String"/>
+	<parameter name="cifCentroP" class="java.lang.String"/>
+	<parameter name="telefonoP" class="java.lang.String"/>
+	<parameter name="correoP" class="java.lang.String"/>
+	<parameter name="nombreCentroCompleto" class="java.lang.String"/>
+	<parameter name="descripcionFirma" class="java.lang.String"/>
+	<parameter name="ssCentro" class="java.lang.String"/>
+	<parameter name="direccionSedeEmpresaP" class="java.lang.String"/>
+	<parameter name="nombreDirectorP" class="java.lang.String"/>
+	<parameter name="apellido1DirectorP" class="java.lang.String"/>
+	<parameter name="apellido2DirectorP" class="java.lang.String"/>
+	<parameter name="cifDirectorP" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="empleado.nombre" class="java.lang.String"/>
+	<field name="empleado.apellido1" class="java.lang.String"/>
+	<field name="empleado.apellido2" class="java.lang.String"/>
+	<field name="empleado.dniEmpleado" class="java.lang.String"/>
+	<field name="numeroConvenio" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.nombre" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido1" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.apellido2" class="java.lang.String"/>
+	<field name="trabajador.datosEmpresaTrabajador.numeroDocumento" class="java.lang.String"/>
+	<field name="empresa.nombreEmpresa" class="java.lang.String"/>
+	<field name="id_sede.domicilio" class="java.lang.String"/>
+	<field name="id_sede.codigoPostal" class="java.lang.String"/>
+	<field name="empresa.numIde" class="java.lang.String"/>
+	<field name="id_sede.telefono" class="java.lang.Long"/>
+	<field name="id_sede.correo" class="java.lang.String"/>
+	<field name="id_sede.localidad.descripcionLarga" class="java.lang.String"/>
+	<field name="id_sede.municipio.provincia.descripcionLarga" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="786" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="544" height="120" uuid="1df91ca4-882c-4bb9-8f33-fbcb6a66a517"/>
+				<imageExpression><![CDATA["assets/imagesPDF/cabecera Nconvenio.PNG"]]></imageExpression>
+			</image>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="91" width="134" height="20" uuid="1cbc43da-0cf3-46b7-bd95-e7fdb7a15b18"/>
+				<textFieldExpression><![CDATA[$F{numeroConvenio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="120" width="510" height="210" uuid="006ea321-4525-47ce-88aa-ff525599fa22">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" verticalAlignment="Middle" markup="styled">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true' pdfFontName='Helvetica-Bold'>De una parte:</style>" +"<br/>" + "D./Dña. " + ($P{nombreDirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{nombreDirectorP}.replace("&", "&amp;").concat(" ")  + "</u>")+ ($P{apellido1DirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{apellido1DirectorP}.replace("&", "&amp;").concat(" ") + "</u>")+($P{apellido2DirectorP}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$P{apellido2DirectorP}.replace("&", "&amp;").concat(" ") +  "</u>")+" con D.N.I "+($P{cifDirectorP}!=null?"<u>"+$P{cifDirectorP}.replace("&", "&amp;") +"</u>":"<u>"+"".concat("           ") + "</u>")+" como Director/a del centro docente " + ($P{nombreCentroCompleto}!=null?"<u>" +$P{nombreCentroCompleto}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" Código del centro "+ ($P{codigoCentroP}!=null?"<u>"+$P{codigoCentroP} +"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" localizado en "+($P{municipioP}!=null?"<u>"+$P{municipioP}+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" provincia de "+($P{provinciaP}!=null?"<u>" +$P{provinciaP}+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+", calle/plaza "+($P{calleP}!=null?"<u>"+$P{calleP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" C.P. "+($P{codigoPostalP} !=null?"<u>"+$P{codigoPostalP}+"</u>":"<u>"+"".concat("           ") + "</u>") +" , con C.I.F. "+($P{cifCentroP}!=null?"<u>"+$P{cifCentroP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("           ") + "</u>")+" , Telefono "+($P{telefonoP}!=null?"<u>"+$P{telefonoP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("           ") + "</u>") +" e-mail "+($P{correoP}!=null?"<u>"+$P{correoP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+"<br/>"+"<style isBold='true' pdfFontName='Helvetica-Bold'>y de otra:</style>" + "<br/>" +  "<br/>" +"D/Dña. " +($F{trabajador.datosEmpresaTrabajador.nombre}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+ $F{trabajador.datosEmpresaTrabajador.nombre}.replace("&", "&amp;").concat(" ") +"</u>")+($F{trabajador.datosEmpresaTrabajador.apellido1}==null?"<u>"+"".concat("           ") + "</u>":"<u>"+$F{trabajador.datosEmpresaTrabajador.apellido1}.replace("&", "&amp;").concat(" ")+ "</u>") +($F{trabajador.datosEmpresaTrabajador.apellido2}==null?"<u>"+"".concat("           ") + "</u>":"<u>" + $F{trabajador.datosEmpresaTrabajador.apellido2}.replace("&", "&amp;").concat("  ")+"</u>") +" con D.N.I. "+($F{trabajador.datosEmpresaTrabajador.numeroDocumento}!=null?"<u>"+$F{trabajador.datosEmpresaTrabajador.numeroDocumento}+"</u>":"<u>"+"".concat("           ") + "</u>")+" como responsable designado en el órgano no público "+($F{empresa.nombreEmpresa}!=null?"<u>"+$F{empresa.nombreEmpresa}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" localizado en "+($F{id_sede.localidad.descripcionLarga}!=null?"<u>" +$F{id_sede.localidad.descripcionLarga}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" provincia de "+($F{id_sede.municipio.provincia.descripcionLarga}!=null?"<u>"+$F{id_sede.municipio.provincia.descripcionLarga}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" calle/plaza "+($P{direccionSedeEmpresaP}!=null?"<u>"+ $P{direccionSedeEmpresaP}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")+" C.P. "+($F{id_sede.codigoPostal}!=null?"<u>" +$F{id_sede.codigoPostal}+"</u>":"<u>"+"".concat("           ") + "</u>")+", con C.I.F. "+($F{empresa.numIde}!=null?"<u>"+$F{empresa.numIde}+"</u>":"<u>"+"".concat("           ") + "</u>")+", Teléfono "+($F{id_sede.telefono}!=null?"<u>"+$F{id_sede.telefono}+"</u>":"<u>"+"".concat("           ") + "</u>")+", e-mail "+($F{id_sede.correo}!=null?"<u>"+$F{id_sede.correo}.replace("&", "&amp;")+"</u>":"<u>"+"".concat("                                                                   ") + "</u>")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="330" width="150" height="20" uuid="90d92e54-4973-4e71-bea7-c922e73db3c7"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[EXPONEN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="345" width="510" height="80" uuid="2f23829c-e1bf-4550-9481-cf8227adeeeb">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Que ambas partes se reconocen recíprocamente capacidad  y legitimidad para convenir." + " <br/>" +
+"Que el objetivo del presente CONVENIO es la colaboración entre las entidades a las que representan para el desarrollo de un PROGRAMA FORMATIVO de Fomación en Centros de Trabajo, para alumnado matriculado en diferentes enseñanzas profesionales del Sistema Educativo." + " <br/>" + 
+"Que dicha colaboración se fundamenta jurídicamente en el artículo 42.2, de la Ley Orgánica 2/2006, de 3 de mayo, de Educación (L.O.E)."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="425" width="150" height="14" uuid="1ea87c04-9d47-4640-894c-6f7c1bbdf0ee"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ACUERDAN]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="17" y="441" width="510" height="90" uuid="a3d73eaa-97ac-45a3-a638-6f10c1ffb0c9">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Suscribir el presente CONVENIO de colaboración para el desarrollo del Módulo profesional de Formación en Centros de Trabajo de los Ciclos Formativos y Prácticas Formativas de otras enseñanzas, de acuerdo con la normativa vigente, que ambas partes conocen y acatan, y de conformidad con las cláusulas que figuran a continuación." + " <br/>" + 
+"Al presente convenio se incorporarán, a lo largo del período de su vigencia, las relaciones nominales de alumnos y alumnas acogidos al mismo (Anexo I), la programación de actividades formativas (Anexo II) a desarrollar por éstos en las empresas y los documentos que faciliten el Seguimiento y Evaluación de los mismos."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="531" width="150" height="20" uuid="438adda3-26a9-4c81-ba93-44bb2c2d723f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CLÁUSULAS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="18" y="553" width="510" height="52" uuid="f8e950c6-dfab-40ef-8ac2-92ef268ea10b">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.spacingBefore" value="px"/>
+					<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+					<paragraph firstLineIndent="0" rightIndent="0" spacingBefore="0" spacingAfter="0"/>
+				</textElement>
+				<textFieldExpression><![CDATA["RIMERA.- El alumnado que figura en el Anexo I (Relación de Alumnos y Alumnas) del presente convenio desarrollará las actividades formativas programadas en en Anexo II (Programa Formativo), en los locales del centro o centros de trabajo de la empresa firmante, o, en su caso, en aquellos lugares en los que la empresa desarrolle su actividad productiva, sin que ello implique relación laboral alguna con la empresa."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="606" width="510" height="50" uuid="9776e988-b536-4775-b15e-2e3629aa1845"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EGUNDA.- La empresa se compromete al cumplimiento de la programación de actividades formativas que previamente hayan sido acordadas con el centro educativo, a realizar su seguimiento y la valoración del progreso del alumnado y ,junto con el tutor o tutora del centro educativo, a la revisión de la programación, si una vez iniciado el período de prácticas, y a la vista de los resultados, fuese necesario."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="657" width="510" height="63" uuid="6910b54a-8cc5-428b-83ce-5546fa535300">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ERCERA.-  Cada alumno y alumna dispondrá de un documento de evaluación de las actividades realizadas, que será supervisado por el responsable de la empresa en colaboración con el tutor o tutora del centro educativo, En dicho documento figurarán las actividades formativas más significativas realizadas en la empresa, con registro de fecha y de los resultados semanales, Esto resultados se reflejarán en una Ficha de Seguimiento y Evaluación, que cumplimentará el responsable de la empresa."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="721" width="510" height="62" uuid="15b242c7-7391-4661-81eb-ceb3812b7874">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UARTA.- La empresa nombrará a un responsable para la coordinación de las actividades formativas a  realizar en el centro de trabajo, que garantizará la orientación y consulta del alumnado, facilitará las relaciones con el profesorado tutor o tutora del centro educativo y aportará los informes valorativos que contribuyan a la evaluación. A tal fin, facilitará al profesorado tutor o tutora del centro educativo el acceso a la empresa y las actuaciones de valoración y supervisión del proceso."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="345" width="8" height="80" uuid="60f18625-13a7-4c5b-ab79-b02609642af5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>" + 
+"-" + "<br/>" + "<br/>" +"<br/>" + 
+"-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="8" y="441" width="8" height="90" uuid="aea25a42-1cf0-4acc-8017-fe883a3df76c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-" + "<br/>" + "<br/>" + "<br/>"  + "-"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="553" width="15" height="52" uuid="888eda27-f5bb-4863-a512-e06a699b23d1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["P"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="606" width="15" height="50" uuid="13e96d0d-b37c-4dba-a19b-35b5e64bc044">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["S"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="657" width="15" height="63" uuid="0ccd5efb-b7e7-4172-8541-1dc5767e951d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["T"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="721" width="15" height="62" uuid="364c192a-7c38-41f7-993c-7eea08343209">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["C"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="784">
+			<image>
+				<reportElement x="8" y="0" width="529" height="57" uuid="e7457e38-cf35-4d59-98cb-0083b5428845"/>
+				<imageExpression><![CDATA["assets/imagesPDF/CabeceraPagina2.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="49" y="663" width="370" height="16" uuid="31c28b7d-5420-4488-92f1-ed54167f0764"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[A la empresa, institución o entidad que firma el presente convenio.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="683" width="370" height="14" uuid="0cbdb70a-6b48-4653-9ec9-774b59afbd98"/>
+				<textElement textAlignment="Justified">
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[Al centro educativo que firma el presente convenio.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="18" y="61" width="516" height="86" uuid="ef454831-703a-488a-8d70-989a201a2262">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UINTA.- La empresa o entidad colaboradora no podrá cubrir, ni siquiera con carácter interino, ningún puesto de trabajo en plantilla con el alumnado que realice actividades formativas en la empresa, salvo que se establezca al efecto una relación laboral de contraprestación económica por servicios contratados. En este caso, se considerará que el alumno o alumna abandona el programa formativo en el centro de trabajo, debiéndose comunicar este hecho por la empresa o institución colaboradora al Director o Directora del Centro Escolar, quien lo comunicará a la Delegación Provincial de la Consejería de Educación, Cultura y Deportes."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="147" width="516" height="100" uuid="7eb71962-64a9-415a-a8a0-3f120b76d7ce">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En el caso de alumnado que ocupe un puesto de trabajo en la empresa, ejerciendo competencias profesionales diferentes a las vinculadas a los estudios de Formación Profesional que esté cursando en el centro educativo, podrá autorizarse el desarrollo del módulo profesional de F.C.T. en la empresa, siempre que previamente se acredite convenientemente que no coincida el horario de trabajo con el horario de formación en la empresa. En estos supuestos, podrá contemplarse la   ampliación del periodo de F.C.T. según lo dispuesto en las Instrucciones de la Dirección General de Formación Profesional sobre la puesta en marcha y desarrollo del módulo profesional de Formación en centros de trabajo, del curso que corresponda."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="292" width="516" height="40" uuid="8f9f6261-99e2-4643-b2bb-ef09e5284afc">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["CTAVA.- El presente convenio podrá extinguirse por mutuo acuerdo, por expiración del tiempo convenido, o por denuncia de cualquiera de las partes, que será comunicada a la otra con una antelación mínima de treinta días y basada en alguna de las siguientes causas:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="333" width="480" height="65" uuid="e784b33d-7a15-43db-8bf9-439d98b84703">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cese de actividades del Centro Docente, o de la empresa o institución colaboradora." + "<br/>" + 
+"Fuerza mayor que imposibilite el desarrollo de las actividades programadas." + "<br/>" + 
+"Incumplimento de las cláusulas establecidas en el convenio específico de colaboración, inadecuación pedagógica de las prácticas formativas, o vulneración de las normas que, en relación con la realización de las actividades programadas, estén en cada caso vigentes."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="333" width="16" height="65" uuid="d133d465-7547-4eb0-b050-edebd319b8b0"/>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a)" + "<br/>" + 
+"b)" + "<br/>" +
+"c)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="399" width="516" height="44" uuid="01184d5d-6fa9-4240-8318-d4695949aea5"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Igualmente, se podrá rescindir para un determinado alumno/a o grupo de alumnos/as, por cualquiera de las partes firmantes, y ser excluido de su participación en el convenio por decisión unilateral del Centro, de empresa o institución colaboradora, o conjunta de ambos en los siguientes casos: "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="54" y="444" width="480" height="32" uuid="b6f8757e-5f4f-4ae9-9f2e-0e86face3458">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Faltas repetidas de asistencia y/o puntualidad no justificadas, previa audiencia del interesado" + "<br/>" +
+"Actitud incorrecta o falta de aprovechamiento, previa audiencia al interesado."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="38" y="444" width="16" height="32" uuid="571459a2-e9b6-40f8-8f6e-a8e5335fc8a0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["a)" + "<br/>" + 
+"b)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="477" width="516" height="80" uuid="bcaca2fe-c04b-414c-a88c-f9e7ca5ddf34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["En cualquier caso, el Centro Docente deberá informar a la Delegación Provincial de la Consejería de Educación, Cultura y Deportes de la extinción o rescisión de los convenios específicos de colaboración en cualquiera de los casos, y esta, a su vez, lo comunicará al Área Funcional de Trabajo e Inmigración del Ministerio de Empleo y Seguridad Social."+ "<br/>" + "En los supuestos de extinción anteriormente mencionados, las actuaciones en curso finalizarán con la elaboración por cada una de las partes, de una memoria de las actuaciones realizadas."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="33" y="662" width="15" height="20" uuid="a567c1b8-02e1-4fc2-aae4-3e6754239e5d"/>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="37" y="663" width="11" height="13" uuid="90adb42a-ad3d-4119-bde6-86854e83d73f">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$P{ssCentro}.equals( "N" )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="33" y="682" width="15" height="20" uuid="787bc84a-f08d-41ff-a20a-261f46dba8f4"/>
+				<imageExpression><![CDATA["assets/imagesPDF/checkUnmark.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="37" y="682" width="11" height="13" uuid="9d53b9ae-853f-42b9-9592-62ddc41b4618">
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$P{ssCentro}.equals( "S" )]]></printWhenExpression>
+				</reportElement>
+				<imageExpression><![CDATA["assets/imagesPDF/checkMark.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="18" y="246" width="516" height="28" uuid="0a1efe69-8368-40cf-a662-5addbc38a0da">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["EXTA.- Los estudios, informes y documentos relativos, desarrollados por el alumnado durante la realización del módulo profesional de F.C.T., quedarán en propiedad de la empresa o entidad colaboradora."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="274" width="516" height="18" uuid="64a75f2e-5581-4e64-b28d-abe32d70af08">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ÉPTIMA.- La duración del convenio será de cuatro años a partir de  su firma."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="606" width="516" height="56" uuid="983a2ae9-b598-4f34-bf64-c046b121d255"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["OVENA.- A partir del 1 de enero de 2024, la realización de prácticas formativas en empresas, instituciones o entidades incluidas en los programas formativos vinculados a este convenio determinará la inclusión en el sistema de la Seguridad Social al alumnado que realice las prácticas indicadas, aunque no tengan carácter remunerado. El cumplimiento de las obligaciones en materia de Seguridad Social corresponderá:"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="61" width="15" height="86" uuid="1f499bf0-b06d-460a-a593-6d9ef0cbb93e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Q"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="246" width="15" height="29" uuid="371ea08f-3450-4ba2-a6c6-fd8e14086efb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["S"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="274" width="15" height="18" uuid="8d4f9988-e6e3-443e-8f85-ca95240bd9a2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["S"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="292" width="15" height="40" uuid="63a1497a-9b91-410e-af83-b8e9c6b0d6d8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["O"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="606" width="15" height="56" uuid="8e4f41a4-0268-47fd-afab-511adb6197e5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["N"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="557" width="516" height="48" uuid="01f66cd8-823f-4c26-804a-35c8f24c4816">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Asimismo, los representantes de los trabajadores de los centros de trabajo serán informados del contenido específico del programa formativo que desarrollará el alumnado sujeto al convenio de colaboración con anterioridad a su firma, actividades, calendario y horario de las mismas, y localización del Centro o Centros de trabajo donde se realizarán."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="19" y="701" width="516" height="78" uuid="34dcdfd8-c06a-4497-b20f-7adce264e6e7"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ÉCIMA.- Para cualquier eventualidad de accidente que pudiera producirse durante el desarrollo de la formación en empresa, la acción protectora será la correspondiente al Régimen General de la Seguridad Social, sin perjuicio de las pólizas que la consejería competente en materia de educación o la empresa puedan suscribir como seguro adicional para mejorar servicios o indemnizaciones. Los colectivos no incluidos en la acción protectora mencionada anteriormente están cubiertos por el seguro escolar y la citada póliza de seguros."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="4" y="701" width="15" height="78" uuid="33e29f77-6b80-4b56-9e98-6bc2a5b60f2b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D"]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="768">
+			<rectangle>
+				<reportElement mode="Transparent" x="4" y="383" width="545" height="135" uuid="69cbf0e8-b1e7-45dc-8411-0f6e4057088f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Solid" lineColor="#736C6C"/>
+				</graphicElement>
+			</rectangle>
+			<textField isBlankWhenNull="true">
+				<reportElement x="58" y="498" width="271" height="20" uuid="772a0448-5152-4020-a502-fcedf6e28880">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[($F{empleado.nombre}==null?"".concat("           ") :$F{empleado.nombre}.replace("&", "&amp;").concat(" "))+ ($F{empleado.apellido1}==null?"".concat("           ") :$F{empleado.apellido1}.replace("&", "&amp;").concat(" "))+($F{empleado.apellido2}==null?"".concat("           ") :$F{empleado.apellido2}.replace("&", "&amp;").concat(" "))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="378" y="499" width="151" height="19" uuid="58582fd0-4d23-4506-a0c4-470640745bef"/>
+				<textFieldExpression><![CDATA[($F{trabajador.datosEmpresaTrabajador.nombre}==null? "".concat("           "):$F{trabajador.datosEmpresaTrabajador.nombre}.replace("&", "&amp;").concat(" "))+ ($F{trabajador.datosEmpresaTrabajador.apellido1}==null? "".concat("           ") : $F{trabajador.datosEmpresaTrabajador.apellido1}.replace("&", "&amp;").concat(" ")) +($F{trabajador.datosEmpresaTrabajador.apellido2}==null?"".concat("           ") :$F{trabajador.datosEmpresaTrabajador.apellido2}.replace("&", "&amp;").concat(" "))]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="32" y="436" width="215" height="20" uuid="c0138110-9523-49eb-b5a1-ea66ab3bc749"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[EL/LA DIRECTOR/A DEL CENTRO DOCENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="434" width="215" height="33" uuid="183ce72d-a44f-4553-a18b-f2237db39bcb"/>
+				<textElement>
+					<font size="9"/>
+				</textElement>
+				<text><![CDATA[EL/LA REPRESENTANTE DE LA EMPRESA O ENTIDAD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="498" width="27" height="20" uuid="6483c9a3-f47e-49d9-bcf1-f9311ae615fe"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="329" y="499" width="48" height="19" uuid="c272a0b8-b138-4ba2-a346-623e88217c01"/>
+				<text><![CDATA[Fdo.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="57" y="408" width="450" height="21" uuid="797d29bb-3ee5-4946-a6c5-e3d5a2c1e693"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{descripcionFirma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="205" width="516" height="60" uuid="a2d0b73f-8015-4bce-8f81-c88d70baa1cb"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ECIMOTERCERA.- El presente convenio de colaboración, tal como se establece en el artículo 4.i) del Decreto 315/2007, de 27 de diciembre, queda sujeto a la jurisdicción contencioso-administrativa en las cuestiones litigiosas que puedan suscitarse, de acuerdo con lo previsto en la Ley 29/1992, de 13 de julio, reguladora de la jurisdicción contencioso-administrativa. "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="265" width="516" height="71" uuid="4b9ed888-526c-4f56-a322-d8f6542a1ff7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ECIMOCUARTA.- Las partes firmantes adoptarán las medidas de seguridad, confidencialidad e integridad de los datos intercambiados necesarias para preservar los derechos sobre tratamiento de la información personal de todas las personas incluidas en el convenio, y garantizarán el cumplimento de lo establecido en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="108" width="516" height="60" uuid="951067ef-0173-4cc1-ba62-b04488ac5c89"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["NDÉCIMA.- La empresa o entidad colaboradora garantizará con respecto al personal de la empresa que esté en contacto habitual con alumnado menor de edad, el no haber sido condenado por sentencia firme por algún delito contra la libertad e indemnidad sexual, que incluye la agresión y abuso sexual, acoso sexual y corrupción de menores, así como por trata de seres humanos."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="168" width="516" height="36" uuid="286e04c2-10b0-43ed-8ce3-8554184e72ef">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Justified" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["UODÉCIMA.- En todo momento, el alumno o alumna irá provisto del D.N.I. y tarjeta de identificación del centro educativo."]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="8" y="0" width="529" height="57" uuid="89e58781-0a9b-465a-95ed-ec45124552b1"/>
+				<imageExpression><![CDATA["assets/imagesPDF/CabeceraPagina2.PNG"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="3" y="265" width="15" height="71" uuid="10ec73fb-9e4b-4b8e-8d73-30eecb8b3188">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="205" width="15" height="60" uuid="54d1eb9e-cd53-4a3b-928f-eaa51a18fc1e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="168" width="15" height="36" uuid="089908ec-200c-446a-bd62-b439e151f1d3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["D"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="3" y="108" width="15" height="60" uuid="8ad52474-054c-40f1-ab33-e194a46a87c7">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Top" markup="styled">
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["U"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="18" y="70" width="516" height="38" uuid="4a116b98-6e16-40f4-9560-6401f2288742"/>
+				<textElement>
+					<font size="9.5"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Adicionalmente, la consejería competente en materia de educación suscribirá un seguro de responsabilidad civil en el entorno profesional para todo el alumnado de Formación Profesional."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="16">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField>
+				<reportElement x="410" y="0" width="106" height="16" uuid="9ad85107-bdc3-4aa6-adc9-c9472bab1fbc">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página  " + $V{PAGE_NUMBER}  + "  de "]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="516" y="0" width="33" height="16" uuid="f2af7020-c269-4932-b5bf-25967a70945f">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="9"/>
+					<paragraph firstLineIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

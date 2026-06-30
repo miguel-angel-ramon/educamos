@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:21:40 CEST 2025
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1749892900296
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1749892900353
+24ccbfe64de64f97829c9e991f6576afa245d779@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892900177
+24ccbfe64de64f97829c9e991f6576afa245d779@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892900239
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact joda-time\:joda-time\:pom\:2.7 from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact joda-time\:joda-time\:pom\:2.7 from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact joda-time\:joda-time\:pom\:2.7 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 403, reason phrase\:  (403)

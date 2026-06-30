@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Jul 16 14:02:38 CEST 2025
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1749892900522
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1749892900581
+24ccbfe64de64f97829c9e991f6576afa245d779@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892900413
+24ccbfe64de64f97829c9e991f6576afa245d779@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892900469
+https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1752667358451
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact org.slf4j\:slf4j-api\:pom\:1.7.10 from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.slf4j\:slf4j-api\:pom\:1.7.10 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 403, reason phrase\:  (403)

@@ -1,0 +1,11 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Wed Nov 05 10:18:24 CET 2025
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1762334303789
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1762334295942
+4e45b31a718b1b3d82e2c43f5861e1f219cdefbb@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1762334303675
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact org.springframework.cloud\:spring-cloud-starter-config\:jar\:sources\:2.2.0.RC1 from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1762334303732
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.springframework.cloud\:spring-cloud-starter-config\:jar\:sources\:2.2.0.RC1 from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 409, reason phrase\:  (409)
+https\://repo.spring.io/milestone/.error=
+https\://repo.spring.io/milestone/.lastUpdated=1762334304440

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.objectweb.zeus</groupId>
+    <artifactId>zeus</artifactId>
+    <name>Zeus XML</name>
+    <version>3.5</version>
+    <description>The Zeus XML-binding framework</description>
+    <url>http://zeus.objectweb.org/</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>dtdparser</groupId>
+            <artifactId>dtdparser</artifactId>
+            <version>1.21</version>
+        </dependency>
+    </dependencies>
+
+    <licenses>
+        <license>
+            <name>LGPL</name>
+            <url>http://www.gnu.org/copyleft/lesser.html</url>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>ObjectWeb Consortium</name>
+        <url>http://www.objectweb.org</url>
+    </organization>
+
+    <distributionManagement>
+        <repository>
+            <id>objectweb-release</id>
+            <name>ObjectWeb's release repository</name>
+            <url>
+                scp://forge.objectweb.org/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2
+            </url>
+        </repository>
+        <snapshotRepository>
+            <id>objectweb-snapshot</id>
+            <name>ObjectWeb's snapshot repository</name>
+            <url>
+                scp://forge.objectweb.org/var/lib/gforge/chroot/home/groups/maven/htdocs/maven2-snapshot/
+            </url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

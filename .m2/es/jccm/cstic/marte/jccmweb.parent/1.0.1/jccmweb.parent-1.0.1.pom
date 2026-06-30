@@ -1,0 +1,169 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>es.jccm.cstic.marte</groupId>
+	<artifactId>jccmweb.parent</artifactId>
+	<version>1.0.1</version>
+	<packaging>pom</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${java.source.version}</source>
+					<target>${java.source.version}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-scm-plugin</artifactId>
+				<version>1.4</version>
+				<configuration>
+					<connectionType>developerConnection</connectionType>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>2.1</version>
+				<configuration>
+					<tagBase>
+						${scm.tagBase}
+					</tagBase>
+					<branchBase>
+						${scm.branchBase}
+					</branchBase>
+				</configuration>
+			</plugin>
+
+
+			<!-- Attach source y javadocs como jars -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.7</version>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<profiles>
+		<profile>
+			<id>libreria</id>
+			<properties>
+				<!-- Aqui no se define la variable entorno pues no debe llevar classifier 
+					el entregable -->
+			</properties>
+		</profile>
+		<profile>
+			<id>local</id>
+			<properties>
+				<entorno>local</entorno>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>desarrollo</id>
+			<properties>
+				<entorno>desarrollo</entorno>
+			</properties>
+		</profile>
+		<profile>
+			<id>preproduccion</id>
+			<properties>
+				<entorno>preproduccion</entorno>
+			</properties>
+		</profile>
+		<profile>
+			<id>produccion</id>
+			<properties>
+				<entorno>produccion</entorno>
+			</properties>
+		</profile>
+		<profile>
+			<id>formacion</id>
+			<properties>
+				<entorno>formacion</entorno>
+			</properties>
+		</profile>
+
+		<!-- Estos perfiles se han creado para un equipo de desarrollo externo 
+			genericos -->
+		<profile>
+			<id>desaExterna</id>
+			<properties>
+				<entorno>desaExterna</entorno>
+			</properties>
+		</profile>
+		<profile>
+			<id>integracionExterna</id>
+			<properties>
+				<entorno>integracionExterna</entorno>
+			</properties>
+		</profile>
+
+
+		<!-- perfiles para indicar en que repositorio maven se quiere hace el despliegue 
+			del artefacto (mvn deploy) se activan indicando el valor en la variable deployArtifactTo -->
+
+		<profile>
+			<id>areaComunCSTIC</id>
+			<activation>
+				<property>
+					<name>deployArtifactTo</name>
+					<value>areaComunCSTIC</value>
+				</property>
+			</activation>
+			<!-- <distributionManagement> <repository> <id>areaComunCSTIC-release</id> 
+				<name>areaComunCSTIC-release</name> <url>https://artifactory.jccm.es/artifactory/areaComunCSTIC-release/</url> 
+				</repository> <snapshotRepository> <id>areaComunCSTIC-snapshot</id> <name>areaComunCSTIC-snapshot</name> 
+				<url>https://artifactory.jccm.es/artifactory/areaComunCSTIC-snapshot/</url> 
+				</snapshotRepository> </distributionManagement> -->
+		</profile>
+	</profiles>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Artifactory-PRO-releases</name>
+			<url>http://artifactory.jccm.es/artifactory/areaComunCSTIC-release/</url>
+		</repository>
+		<snapshotRepository>
+			<id>central</id>
+			<name>Artifactory-PRO-snapshots</name>
+			<url>http://artifactory.jccm.es/artifactory/areaComunCSTIC-snapshot/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

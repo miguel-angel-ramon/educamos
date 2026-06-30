@@ -1,0 +1,9 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:22:03 CEST 2025
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-release-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.lastUpdated=1749892923737
+24ccbfe64de64f97829c9e991f6576afa245d779@default-areaCentrosEducativos-snapshot-https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.lastUpdated=1749892923789
+24ccbfe64de64f97829c9e991f6576afa245d779@default-central-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892923634
+24ccbfe64de64f97829c9e991f6576afa245d779@default-snapshots-https\://artifactory.jccm.es/artifactory/CSTIC/.lastUpdated=1749892923685
+https\://artifactory.jccm.es/artifactory/CSTIC/.error=Could not transfer artifact org.thymeleaf.extras\:thymeleaf-extras-springsecurity3\:jar\:javadoc\:2.1.1.RELEASE from/to snapshots (https\://artifactory.jccm.es/artifactory/CSTIC)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/.error=Could not transfer artifact org.thymeleaf.extras\:thymeleaf-extras-springsecurity3\:jar\:javadoc\:2.1.1.RELEASE from/to areaCentrosEducativos-release (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-release/)\: status code\: 403, reason phrase\:  (403)
+https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/.error=Could not transfer artifact org.thymeleaf.extras\:thymeleaf-extras-springsecurity3\:jar\:javadoc\:2.1.1.RELEASE from/to areaCentrosEducativos-snapshot (https\://artifactory.jccm.es/artifactory/areaCentrosEducativos-snapshot/)\: status code\: 403, reason phrase\:  (403)

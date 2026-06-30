@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 12:08:54 CEST 2025
+log4j-layout-template-json-2.20.0-sources.jar>central=
+log4j-layout-template-json-2.20.0.jar>central=
+log4j-layout-template-json-2.20.0.pom>central=

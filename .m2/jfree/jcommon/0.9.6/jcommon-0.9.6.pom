@@ -1,0 +1,7 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jfree</groupId>
+  <artifactId>jcommon</artifactId>
+  <name>JCommon</name>
+  <version>0.9.6</version>
+</project>

@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Fri Jan 16 11:13:04 CET 2026
+javase-3.4.0-sources.jar>central=
+javase-3.4.0.jar>central=
+javase-3.4.0.pom>central=

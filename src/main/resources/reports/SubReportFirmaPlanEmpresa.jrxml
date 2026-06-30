@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="subReportFirmaPlanEmpresa" pageWidth="786" pageHeight="595" orientation="Landscape" columnWidth="786" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="af5d423e-c4d0-4579-b9c8-4831376eb7cc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="tutor" class="java.lang.String"/>
+	<parameter name="tutorEmpresa" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="133" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="786" height="133" uuid="6d0a53e7-84f7-4a30-a922-681ca7d47ebd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement x="3" y="3" width="395" height="127" uuid="42192faa-82ea-4fcf-958e-738ec3cbe23e">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+					<font size="10" isBold="true"/>
+					<paragraph firstLineIndent="4" leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<br/>"+"El/la Tutor/a Dual del centro educativo"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>" + "Fdo.: " + ($P{tutor}!=null?$P{tutor}.replace("&", "&amp;"):"__________________________")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="402" y="3" width="380" height="127" uuid="0646dcba-bcd2-4d16-8549-6cf8df837dcc">
+					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.leftIndent" value="px"/>
+					<property name="com.jaspersoft.studio.unit.spacingAfter" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top" markup="styled">
+					<font size="10" isBold="true"/>
+					<paragraph firstLineIndent="4" leftIndent="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<br/>"+"El/la Tutor/a Dual de la empresa"+"<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>" +"<br/>"+"<br/>"+"<br/>" + "Fdo.: "+ ($P{tutorEmpresa}!=null?$P{tutorEmpresa}.replace("&", "&amp;"):"__________________________")]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

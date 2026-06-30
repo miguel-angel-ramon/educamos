@@ -1,0 +1,5 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Jun 14 11:38:51 CEST 2025
+grpc-services-1.55.1-sources.jar>central=
+grpc-services-1.55.1.jar>central=
+grpc-services-1.55.1.pom>central=
